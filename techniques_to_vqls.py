@@ -10,7 +10,7 @@ WHERE Name =~ '{process_name}'
 LIMIT 50
 
 SELECT 
-    CreateTime
+    CreateTime,
     Name as ProcessName,
     Pid as PID,
     Ppid as ParentPID,
