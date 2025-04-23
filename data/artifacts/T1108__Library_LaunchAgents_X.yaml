@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Redundant Access with ID T1108
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1108' as TechniqueID,\n    'Redundant Access'\
-    \ as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    'T1108' as TechniqueID,\n    'Redundant Access' as TechniqueName,\n\
+    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

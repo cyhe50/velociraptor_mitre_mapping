@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Input Capture with ID T1056
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1056' as TechniqueID,\n    'Input Capture'\
-    \ as TechniqueName\nFROM process_events\n"
+    LIMIT 50\n\nSELECT \n    'T1056' as TechniqueID,\n    'Input Capture' as TechniqueName,\n\
+    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

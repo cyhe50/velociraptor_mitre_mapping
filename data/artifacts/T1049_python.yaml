@@ -4,5 +4,6 @@ description: process_execution type of System Network Connections Discovery with
   T1049
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1049' as TechniqueID,\n    'System Network\
-    \ Connections Discovery' as TechniqueName\nFROM process_events\n"
+    LIMIT 50\n\nSELECT \n    'T1049' as TechniqueID,\n    'System Network Connections\
+    \ Discovery' as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM\
+    \ process_events\n"

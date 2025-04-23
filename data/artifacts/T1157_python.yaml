@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Dylib Hijacking with ID T1157
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1157' as TechniqueID,\n    'Dylib Hijacking'\
-    \ as TechniqueName\nFROM process_events\n"
+    LIMIT 50\n\nSELECT \n    'T1157' as TechniqueID,\n    'Dylib Hijacking' as TechniqueName,\n\
+    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

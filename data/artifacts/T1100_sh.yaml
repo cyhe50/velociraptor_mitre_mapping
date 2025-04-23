@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Web Shell with ID T1100
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    *,\n    'T1100' as TechniqueID,\n    'Web Shell' as TechniqueName\n\
-    FROM process_events\n"
+    \ 50\n\nSELECT \n    'T1100' as TechniqueID,\n    'Web Shell' as TechniqueName,\n\
+    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

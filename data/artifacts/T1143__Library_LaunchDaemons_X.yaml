@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Hidden Window with ID T1143
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1143' as TechniqueID,\n    'Hidden Window'\
-    \ as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    'T1143' as TechniqueID,\n    'Hidden Window' as TechniqueName,\n\
+    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

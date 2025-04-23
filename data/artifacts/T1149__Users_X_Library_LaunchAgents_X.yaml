@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of LC_MAIN Hijacking with ID T1149
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1149' as TechniqueID,\n    'LC_MAIN Hijacking'\
-    \ as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    'T1149' as TechniqueID,\n    'LC_MAIN Hijacking' as TechniqueName,\n\
+    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

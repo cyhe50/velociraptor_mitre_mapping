@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Obfuscated Files or Information with ID T1027
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    *,\n    'T1027' as TechniqueID,\n    'Obfuscated Files or\
-    \ Information' as TechniqueName\nFROM process_events\n"
+    \ 50\n\nSELECT \n    'T1027' as TechniqueID,\n    'Obfuscated Files or Information'\
+    \ as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"

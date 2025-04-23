@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Rc.common with ID T1163
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'perl'\nLIMIT\
-    \ 50\n\nSELECT \n    *,\n    'T1163' as TechniqueID,\n    'Rc.common' as TechniqueName\n\
-    FROM process_events\n"
+    \ 50\n\nSELECT \n    'T1163' as TechniqueID,\n    'Rc.common' as TechniqueName,\n\
+    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Multi-Stage Channels with ID T1104
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    *,\n    'T1104' as TechniqueID,\n    'Multi-Stage Channels'\
-    \ as TechniqueName\nFROM process_events\n"
+    \ 50\n\nSELECT \n    'T1104' as TechniqueID,\n    'Multi-Stage Channels' as TechniqueName,\n\
+    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

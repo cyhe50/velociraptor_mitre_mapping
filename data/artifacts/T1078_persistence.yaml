@@ -3,5 +3,5 @@ type: CLIENT
 description: persistence type of Valid Accounts with ID T1078
 sources:
 - query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1078' as TechniqueID,\n    'Valid Accounts'\
-    \ as TechniqueName\nFROM persistence_locations\n"
+    LIMIT 50\n\nSELECT \n    'T1078' as TechniqueID,\n    'Valid Accounts' as TechniqueName,\n\
+    \    'persistence' as Tactic,\n    *\nFROM persistence_locations\n"

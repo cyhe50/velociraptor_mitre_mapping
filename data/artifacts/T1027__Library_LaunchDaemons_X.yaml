@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Obfuscated Files or Information with ID T1027
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1027' as TechniqueID,\n    'Obfuscated Files\
-    \ or Information' as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    'T1027' as TechniqueID,\n    'Obfuscated Files or Information'\
+    \ as TechniqueName,\n    'file_creation' as Tactic,\n    *\nFROM file_events\n"

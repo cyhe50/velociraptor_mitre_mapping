@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Security Software Discovery with ID T1063
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    *,\n    'T1063' as TechniqueID,\n    'Security Software Discovery'\
-    \ as TechniqueName\nFROM process_events\n"
+    \ 50\n\nSELECT \n    'T1063' as TechniqueID,\n    'Security Software Discovery'\
+    \ as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"

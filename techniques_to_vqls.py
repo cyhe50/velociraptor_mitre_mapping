@@ -10,9 +10,10 @@ WHERE Name =~ '{process_name}'
 LIMIT 50
 
 SELECT 
-    *,
     '{technique_id}' as TechniqueID,
-    '{technique_name}' as TechniqueName
+    '{technique_name}' as TechniqueName,
+    'process_execution' as Tactic,
+    *
 FROM process_events
 """,
     
@@ -21,9 +22,10 @@ LET file_events = SELECT * FROM glob(globs='{file_path}')
 LIMIT 50
 
 SELECT 
-    *,
     '{technique_id}' as TechniqueID,
-    '{technique_name}' as TechniqueName
+    '{technique_name}' as TechniqueName,
+    'file_creation' as Tactic,
+    *
 FROM file_events
 """,
 
@@ -32,9 +34,10 @@ LET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()
 LIMIT 50
 
 SELECT 
-    *,
     '{technique_id}' as TechniqueID,
-    '{technique_name}' as TechniqueName
+    '{technique_name}' as TechniqueName,
+    'persistence' as Tactic,
+    *
 FROM persistence_locations
 """
 }

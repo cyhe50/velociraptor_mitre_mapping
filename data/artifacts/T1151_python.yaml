@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Space after Filename with ID T1151
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1151' as TechniqueID,\n    'Space after Filename'\
-    \ as TechniqueName\nFROM process_events\n"
+    LIMIT 50\n\nSELECT \n    'T1151' as TechniqueID,\n    'Space after Filename' as\
+    \ TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"

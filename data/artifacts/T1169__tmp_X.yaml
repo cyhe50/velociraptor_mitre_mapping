@@ -3,4 +3,5 @@ type: CLIENT
 description: file_creation type of Sudo with ID T1169
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    *,\n    'T1169' as TechniqueID,\n    'Sudo' as TechniqueName\nFROM file_events\n"
+    \ \n    'T1169' as TechniqueID,\n    'Sudo' as TechniqueName,\n    'file_creation'\
+    \ as Tactic,\n    *\nFROM file_events\n"

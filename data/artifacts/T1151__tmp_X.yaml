@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Space after Filename with ID T1151
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    *,\n    'T1151' as TechniqueID,\n    'Space after Filename' as TechniqueName\n\
-    FROM file_events\n"
+    \ \n    'T1151' as TechniqueID,\n    'Space after Filename' as TechniqueName,\n\
+    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Launchctl with ID T1152
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1152' as TechniqueID,\n    'Launchctl' as TechniqueName\n\
-    FROM process_events\n"
+    LIMIT 50\n\nSELECT \n    'T1152' as TechniqueID,\n    'Launchctl' as TechniqueName,\n\
+    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of File and Directory Discovery with ID T1083
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1083' as TechniqueID,\n    'File and Directory\
-    \ Discovery' as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    'T1083' as TechniqueID,\n    'File and Directory Discovery'\
+    \ as TechniqueName,\n    'file_creation' as Tactic,\n    *\nFROM file_events\n"

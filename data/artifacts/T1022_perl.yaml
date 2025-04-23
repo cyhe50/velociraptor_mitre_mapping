@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Data Encrypted with ID T1022
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'perl'\nLIMIT\
-    \ 50\n\nSELECT \n    *,\n    'T1022' as TechniqueID,\n    'Data Encrypted' as\
-    \ TechniqueName\nFROM process_events\n"
+    \ 50\n\nSELECT \n    'T1022' as TechniqueID,\n    'Data Encrypted' as TechniqueName,\n\
+    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

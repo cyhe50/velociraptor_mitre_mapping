@@ -76,7 +76,6 @@ def convert_events_to_navigator_layer(events):
     navigator = MITRE_NAVIGATOR.copy()
 
     for event in events:
-        event['Tactic'] = 'persistence'
         technique = {
             "techniqueID": event['TechniqueID'],
             "tactic": event['Tactic'],

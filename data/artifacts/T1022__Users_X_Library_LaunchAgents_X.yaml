@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Data Encrypted with ID T1022
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1022' as TechniqueID,\n    'Data Encrypted'\
-    \ as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    'T1022' as TechniqueID,\n    'Data Encrypted' as TechniqueName,\n\
+    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

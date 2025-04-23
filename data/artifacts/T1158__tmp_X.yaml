@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Hidden Files and Directories with ID T1158
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    *,\n    'T1158' as TechniqueID,\n    'Hidden Files and Directories' as\
-    \ TechniqueName\nFROM file_events\n"
+    \ \n    'T1158' as TechniqueID,\n    'Hidden Files and Directories' as TechniqueName,\n\
+    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

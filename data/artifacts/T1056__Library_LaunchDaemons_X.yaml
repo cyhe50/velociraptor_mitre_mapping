@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Input Capture with ID T1056
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1056' as TechniqueID,\n    'Input Capture'\
-    \ as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    'T1056' as TechniqueID,\n    'Input Capture' as TechniqueName,\n\
+    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

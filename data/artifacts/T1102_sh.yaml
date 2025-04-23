@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Web Service with ID T1102
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    *,\n    'T1102' as TechniqueID,\n    'Web Service' as TechniqueName\n\
-    FROM process_events\n"
+    \ 50\n\nSELECT \n    'T1102' as TechniqueID,\n    'Web Service' as TechniqueName,\n\
+    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

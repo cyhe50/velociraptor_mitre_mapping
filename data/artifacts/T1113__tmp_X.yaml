@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Screen Capture with ID T1113
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    *,\n    'T1113' as TechniqueID,\n    'Screen Capture' as TechniqueName\n\
-    FROM file_events\n"
+    \ \n    'T1113' as TechniqueID,\n    'Screen Capture' as TechniqueName,\n    'file_creation'\
+    \ as Tactic,\n    *\nFROM file_events\n"

@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Standard Cryptographic Protocol with ID T1032
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1032' as TechniqueID,\n    'Standard Cryptographic\
-    \ Protocol' as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    'T1032' as TechniqueID,\n    'Standard Cryptographic\
+    \ Protocol' as TechniqueName,\n    'file_creation' as Tactic,\n    *\nFROM file_events\n"

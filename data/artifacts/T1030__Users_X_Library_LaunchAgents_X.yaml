@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Data Transfer Size Limits with ID T1030
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1030' as TechniqueID,\n    'Data Transfer Size\
-    \ Limits' as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    'T1030' as TechniqueID,\n    'Data Transfer Size Limits'\
+    \ as TechniqueName,\n    'file_creation' as Tactic,\n    *\nFROM file_events\n"

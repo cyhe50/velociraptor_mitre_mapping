@@ -3,5 +3,5 @@ type: CLIENT
 description: process_execution type of Data from Removable Media with ID T1025
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    *,\n    'T1025' as TechniqueID,\n    'Data from Removable\
-    \ Media' as TechniqueName\nFROM process_events\n"
+    LIMIT 50\n\nSELECT \n    'T1025' as TechniqueID,\n    'Data from Removable Media'\
+    \ as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"
