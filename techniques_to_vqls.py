@@ -36,7 +36,7 @@ FROM file_events
 """,
 
     "persistence": """
-LET persistence_locations = SELECT * FROM Artifact.Mac.Persistence.LaunchAgents()
+LET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()
 LIMIT 50
 
 SELECT 

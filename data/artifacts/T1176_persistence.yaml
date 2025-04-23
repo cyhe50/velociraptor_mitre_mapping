@@ -2,7 +2,7 @@ name: Custom.MITRE.T1176_persistence
 type: CLIENT
 description: persistence type of Browser Extensions with ID T1176
 sources:
-- query: "\nLET persistence_locations = SELECT * FROM Artifact.Mac.Persistence.LaunchAgents()\n\
+- query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
     LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
     \    RunAtLoad,\n    Source,\n    'T1176' as TechniqueID,\n    'Browser Extensions'\
     \ as TechniqueName\nFROM persistence_locations\n"

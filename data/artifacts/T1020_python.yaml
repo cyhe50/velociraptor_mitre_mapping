@@ -3,6 +3,6 @@ type: CLIENT
 description: process_execution type of Automated Exfiltration with ID T1020
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    CreateTime\n    Name as ProcessName,\n    Pid as PID,\n\
+    LIMIT 50\n\nSELECT \n    CreateTime,\n    Name as ProcessName,\n    Pid as PID,\n\
     \    Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1020' as TechniqueID,\n\
     \    'Automated Exfiltration' as TechniqueName\nFROM process_events\n"

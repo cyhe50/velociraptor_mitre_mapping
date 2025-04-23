@@ -3,6 +3,6 @@ type: CLIENT
 description: process_execution type of Data from Network Shared Drive with ID T1039
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    CreateTime\n    Name as ProcessName,\n    Pid as PID,\n \
-    \   Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1039' as TechniqueID,\n\
+    \ 50\n\nSELECT \n    CreateTime,\n    Name as ProcessName,\n    Pid as PID,\n\
+    \    Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1039' as TechniqueID,\n\
     \    'Data from Network Shared Drive' as TechniqueName\nFROM process_events\n"

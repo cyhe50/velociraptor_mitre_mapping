@@ -2,7 +2,7 @@ name: Custom.MITRE.T1078_persistence
 type: CLIENT
 description: persistence type of Valid Accounts with ID T1078
 sources:
-- query: "\nLET persistence_locations = SELECT * FROM Artifact.Mac.Persistence.LaunchAgents()\n\
+- query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
     LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
     \    RunAtLoad,\n    Source,\n    'T1078' as TechniqueID,\n    'Valid Accounts'\
     \ as TechniqueName\nFROM persistence_locations\n"
