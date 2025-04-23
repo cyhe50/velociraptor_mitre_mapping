@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Automated Collection with ID T1119
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1119' as TechniqueID,\n\
-    \    'Automated Collection' as TechniqueName\nFROM file_events\n"
+    \ \n    *,\n    'T1119' as TechniqueID,\n    'Automated Collection' as TechniqueName\n\
+    FROM file_events\n"

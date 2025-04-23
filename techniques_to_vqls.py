@@ -10,12 +10,7 @@ WHERE Name =~ '{process_name}'
 LIMIT 50
 
 SELECT 
-    CreateTime,
-    Name as ProcessName,
-    Pid as PID,
-    Ppid as ParentPID,
-    Username,
-    CommandLine,
+    *,
     '{technique_id}' as TechniqueID,
     '{technique_name}' as TechniqueName
 FROM process_events
@@ -26,10 +21,7 @@ LET file_events = SELECT * FROM glob(globs='{file_path}')
 LIMIT 50
 
 SELECT 
-    CreateTime,
-    FullPath,
-    Size,
-    Mode,
+    *,
     '{technique_id}' as TechniqueID,
     '{technique_name}' as TechniqueName
 FROM file_events
@@ -40,12 +32,7 @@ LET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()
 LIMIT 50
 
 SELECT 
-    Name,
-    Label,
-    Program,
-    ProgramArguments,
-    RunAtLoad,
-    Source,
+    *,
     '{technique_id}' as TechniqueID,
     '{technique_name}' as TechniqueName
 FROM persistence_locations

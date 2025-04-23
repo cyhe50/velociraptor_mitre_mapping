@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Scheduled Transfer with ID T1029
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
-    \  'T1029' as TechniqueID,\n    'Scheduled Transfer' as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    *,\n    'T1029' as TechniqueID,\n    'Scheduled Transfer'\
+    \ as TechniqueName\nFROM file_events\n"

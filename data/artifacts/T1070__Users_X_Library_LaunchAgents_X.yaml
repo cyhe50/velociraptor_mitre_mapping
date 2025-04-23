@@ -3,6 +3,5 @@ type: CLIENT
 description: file_creation type of Indicator Removal on Host with ID T1070
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
-    \  'T1070' as TechniqueID,\n    'Indicator Removal on Host' as TechniqueName\n\
-    FROM file_events\n"
+    LIMIT 50\n\nSELECT \n    *,\n    'T1070' as TechniqueID,\n    'Indicator Removal\
+    \ on Host' as TechniqueName\nFROM file_events\n"

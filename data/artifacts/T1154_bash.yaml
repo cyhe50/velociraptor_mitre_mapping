@@ -3,6 +3,5 @@ type: CLIENT
 description: process_execution type of Trap with ID T1154
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'bash'\nLIMIT\
-    \ 50\n\nSELECT \n    CreateTime,\n    Name as ProcessName,\n    Pid as PID,\n\
-    \    Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1154' as TechniqueID,\n\
-    \    'Trap' as TechniqueName\nFROM process_events\n"
+    \ 50\n\nSELECT \n    *,\n    'T1154' as TechniqueID,\n    'Trap' as TechniqueName\n\
+    FROM process_events\n"

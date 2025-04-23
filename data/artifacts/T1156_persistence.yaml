@@ -3,6 +3,5 @@ type: CLIENT
 description: persistence type of .bash_profile and .bashrc with ID T1156
 sources:
 - query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
-    \    RunAtLoad,\n    Source,\n    'T1156' as TechniqueID,\n    '.bash_profile\
-    \ and .bashrc' as TechniqueName\nFROM persistence_locations\n"
+    LIMIT 50\n\nSELECT \n    *,\n    'T1156' as TechniqueID,\n    '.bash_profile and\
+    \ .bashrc' as TechniqueName\nFROM persistence_locations\n"

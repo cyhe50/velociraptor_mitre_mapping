@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Gatekeeper Bypass with ID T1144
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
-    \  'T1144' as TechniqueID,\n    'Gatekeeper Bypass' as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    *,\n    'T1144' as TechniqueID,\n    'Gatekeeper Bypass'\
+    \ as TechniqueName\nFROM file_events\n"

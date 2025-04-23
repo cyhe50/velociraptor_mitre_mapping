@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Hidden Users with ID T1147
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1147' as TechniqueID,\n\
-    \    'Hidden Users' as TechniqueName\nFROM file_events\n"
+    \ \n    *,\n    'T1147' as TechniqueID,\n    'Hidden Users' as TechniqueName\n\
+    FROM file_events\n"

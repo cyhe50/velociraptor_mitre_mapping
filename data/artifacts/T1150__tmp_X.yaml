@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Plist Modification with ID T1150
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1150' as TechniqueID,\n\
-    \    'Plist Modification' as TechniqueName\nFROM file_events\n"
+    \ \n    *,\n    'T1150' as TechniqueID,\n    'Plist Modification' as TechniqueName\n\
+    FROM file_events\n"

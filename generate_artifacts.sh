@@ -47,5 +47,5 @@ cp data/Custom_MITRE_MAIN_AllDetections.yaml "$path"
 
 
 
-echo "Finished Uploading. Now you can go Velociraptor server to check themk"
+echo "Finished Uploading. Now you can go Velociraptor server to check them"
 

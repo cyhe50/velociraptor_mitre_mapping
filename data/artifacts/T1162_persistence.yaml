@@ -3,6 +3,5 @@ type: CLIENT
 description: persistence type of Login Item with ID T1162
 sources:
 - query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
-    \    RunAtLoad,\n    Source,\n    'T1162' as TechniqueID,\n    'Login Item' as\
+    LIMIT 50\n\nSELECT \n    *,\n    'T1162' as TechniqueID,\n    'Login Item' as\
     \ TechniqueName\nFROM persistence_locations\n"

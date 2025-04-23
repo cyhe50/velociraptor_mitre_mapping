@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Remote File Copy with ID T1105
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
-    \  'T1105' as TechniqueID,\n    'Remote File Copy' as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    *,\n    'T1105' as TechniqueID,\n    'Remote File Copy'\
+    \ as TechniqueName\nFROM file_events\n"

@@ -3,6 +3,5 @@ type: CLIENT
 description: persistence type of Rc.common with ID T1163
 sources:
 - query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
-    \    RunAtLoad,\n    Source,\n    'T1163' as TechniqueID,\n    'Rc.common' as\
-    \ TechniqueName\nFROM persistence_locations\n"
+    LIMIT 50\n\nSELECT \n    *,\n    'T1163' as TechniqueID,\n    'Rc.common' as TechniqueName\n\
+    FROM persistence_locations\n"

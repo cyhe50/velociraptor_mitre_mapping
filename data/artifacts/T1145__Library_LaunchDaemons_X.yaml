@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Private Keys with ID T1145
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
-    \  'T1145' as TechniqueID,\n    'Private Keys' as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    *,\n    'T1145' as TechniqueID,\n    'Private Keys' as\
+    \ TechniqueName\nFROM file_events\n"

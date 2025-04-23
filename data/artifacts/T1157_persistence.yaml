@@ -3,6 +3,5 @@ type: CLIENT
 description: persistence type of Dylib Hijacking with ID T1157
 sources:
 - query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
-    \    RunAtLoad,\n    Source,\n    'T1157' as TechniqueID,\n    'Dylib Hijacking'\
+    LIMIT 50\n\nSELECT \n    *,\n    'T1157' as TechniqueID,\n    'Dylib Hijacking'\
     \ as TechniqueName\nFROM persistence_locations\n"

@@ -3,6 +3,5 @@ type: CLIENT
 description: process_execution type of Dylib Hijacking with ID T1157
 sources:
 - query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'bash'\nLIMIT\
-    \ 50\n\nSELECT \n    CreateTime,\n    Name as ProcessName,\n    Pid as PID,\n\
-    \    Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1157' as TechniqueID,\n\
-    \    'Dylib Hijacking' as TechniqueName\nFROM process_events\n"
+    \ 50\n\nSELECT \n    *,\n    'T1157' as TechniqueID,\n    'Dylib Hijacking' as\
+    \ TechniqueName\nFROM process_events\n"

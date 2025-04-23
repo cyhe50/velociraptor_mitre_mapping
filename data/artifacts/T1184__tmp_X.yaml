@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of SSH Hijacking with ID T1184
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1184' as TechniqueID,\n\
-    \    'SSH Hijacking' as TechniqueName\nFROM file_events\n"
+    \ \n    *,\n    'T1184' as TechniqueID,\n    'SSH Hijacking' as TechniqueName\n\
+    FROM file_events\n"

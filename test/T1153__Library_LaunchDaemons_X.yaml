@@ -3,5 +3,5 @@ type: CLIENT
 description: file_creation type of Source with ID T1153
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
-    \  'T1153' as TechniqueID,\n    'Source' as TechniqueName\nFROM file_events\n"
+    LIMIT 50\n\nSELECT \n    *,\n    'T1153' as TechniqueID,\n    'Source' as TechniqueName\n\
+    FROM file_events\n"

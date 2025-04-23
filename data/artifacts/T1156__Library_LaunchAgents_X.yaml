@@ -3,6 +3,5 @@ type: CLIENT
 description: file_creation type of .bash_profile and .bashrc with ID T1156
 sources:
 - query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
-    \  'T1156' as TechniqueID,\n    '.bash_profile and .bashrc' as TechniqueName\n\
-    FROM file_events\n"
+    LIMIT 50\n\nSELECT \n    *,\n    'T1156' as TechniqueID,\n    '.bash_profile and\
+    \ .bashrc' as TechniqueName\nFROM file_events\n"
