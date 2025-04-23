@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1163__tmp_X
+type: CLIENT
+description: file_creation type of Rc.common with ID T1163
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
+    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1163' as TechniqueID,\n\
+    \    'Rc.common' as TechniqueName\nFROM file_events\n"

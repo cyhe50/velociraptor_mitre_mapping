@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1056_ruby
+type: CLIENT
+description: process_execution type of Input Capture with ID T1056
+sources:
+- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'ruby'\nLIMIT\
+    \ 50\n\nSELECT \n    CreateTime\n    Name as ProcessName,\n    Pid as PID,\n \
+    \   Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1056' as TechniqueID,\n\
+    \    'Input Capture' as TechniqueName\nFROM process_events\n"

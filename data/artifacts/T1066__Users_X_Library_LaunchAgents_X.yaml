@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1066__Users_X_Library_LaunchAgents_X
+type: CLIENT
+description: file_creation type of Indicator Removal from Tools with ID T1066
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
+    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
+    \  'T1066' as TechniqueID,\n    'Indicator Removal from Tools' as TechniqueName\n\
+    FROM file_events\n"

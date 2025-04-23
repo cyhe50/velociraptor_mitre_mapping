@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1168_persistence
+type: CLIENT
+description: persistence type of Local Job Scheduling with ID T1168
+sources:
+- query: "\nLET persistence_locations = SELECT * FROM Artifact.Mac.Persistence.LaunchAgents()\n\
+    LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
+    \    RunAtLoad,\n    Source,\n    'T1168' as TechniqueID,\n    'Local Job Scheduling'\
+    \ as TechniqueName\nFROM persistence_locations\n"

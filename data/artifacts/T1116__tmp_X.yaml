@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1116__tmp_X
+type: CLIENT
+description: file_creation type of Code Signing with ID T1116
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
+    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1116' as TechniqueID,\n\
+    \    'Code Signing' as TechniqueName\nFROM file_events\n"

@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1005_bash
+type: CLIENT
+description: process_execution type of Data from Local System with ID T1005
+sources:
+- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'bash'\nLIMIT\
+    \ 50\n\nSELECT \n    CreateTime\n    Name as ProcessName,\n    Pid as PID,\n \
+    \   Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1005' as TechniqueID,\n\
+    \    'Data from Local System' as TechniqueName\nFROM process_events\n"

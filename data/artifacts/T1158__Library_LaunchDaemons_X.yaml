@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1158__Library_LaunchDaemons_X
+type: CLIENT
+description: file_creation type of Hidden Files and Directories with ID T1158
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
+    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
+    \  'T1158' as TechniqueID,\n    'Hidden Files and Directories' as TechniqueName\n\
+    FROM file_events\n"

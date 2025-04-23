@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1136_persistence
+type: CLIENT
+description: persistence type of Create Account with ID T1136
+sources:
+- query: "\nLET persistence_locations = SELECT * FROM Artifact.Mac.Persistence.LaunchAgents()\n\
+    LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
+    \    RunAtLoad,\n    Source,\n    'T1136' as TechniqueID,\n    'Create Account'\
+    \ as TechniqueName\nFROM persistence_locations\n"

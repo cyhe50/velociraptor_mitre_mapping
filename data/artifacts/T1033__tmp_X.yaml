@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1033__tmp_X
+type: CLIENT
+description: file_creation type of System Owner/User Discovery with ID T1033
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
+    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1033' as TechniqueID,\n\
+    \    'System Owner/User Discovery' as TechniqueName\nFROM file_events\n"

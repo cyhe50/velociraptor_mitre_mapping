@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1151__Library_LaunchDaemons_X
+type: CLIENT
+description: file_creation type of Space after Filename with ID T1151
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
+    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
+    \  'T1151' as TechniqueID,\n    'Space after Filename' as TechniqueName\nFROM\
+    \ file_events\n"

@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1014__tmp_X
+type: CLIENT
+description: file_creation type of Rootkit with ID T1014
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
+    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1014' as TechniqueID,\n\
+    \    'Rootkit' as TechniqueName\nFROM file_events\n"

@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1152_persistence
+type: CLIENT
+description: persistence type of Launchctl with ID T1152
+sources:
+- query: "\nLET persistence_locations = SELECT * FROM Artifact.Mac.Persistence.LaunchAgents()\n\
+    LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
+    \    RunAtLoad,\n    Source,\n    'T1152' as TechniqueID,\n    'Launchctl' as\
+    \ TechniqueName\nFROM persistence_locations\n"

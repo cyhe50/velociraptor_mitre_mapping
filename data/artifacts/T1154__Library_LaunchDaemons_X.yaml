@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1154__Library_LaunchDaemons_X
+type: CLIENT
+description: file_creation type of Trap with ID T1154
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
+    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
+    \  'T1154' as TechniqueID,\n    'Trap' as TechniqueName\nFROM file_events\n"

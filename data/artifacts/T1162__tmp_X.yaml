@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1162__tmp_X
+type: CLIENT
+description: file_creation type of Login Item with ID T1162
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
+    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1162' as TechniqueID,\n\
+    \    'Login Item' as TechniqueName\nFROM file_events\n"

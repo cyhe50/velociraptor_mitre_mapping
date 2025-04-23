@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1036__Users_X_Library_LaunchAgents_X
+type: CLIENT
+description: file_creation type of Masquerading with ID T1036
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
+    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
+    \  'T1036' as TechniqueID,\n    'Masquerading' as TechniqueName\nFROM file_events\n"

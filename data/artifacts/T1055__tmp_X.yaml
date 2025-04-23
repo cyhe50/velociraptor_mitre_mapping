@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1055__tmp_X
+type: CLIENT
+description: file_creation type of Process Injection with ID T1055
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
+    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1055' as TechniqueID,\n\
+    \    'Process Injection' as TechniqueName\nFROM file_events\n"

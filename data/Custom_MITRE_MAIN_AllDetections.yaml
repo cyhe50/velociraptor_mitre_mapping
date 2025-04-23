@@ -1,0 +1,971 @@
+name: Custom.MITRE.MAIN.AllDetections
+type: CLIENT
+description: Run all MITRE ATT&CK detection rules for macOS
+sources:
+- query: "LET all_results = SELECT * FROM chain(\n    a0 = { SELECT *, 'Custom.MITRE.T1156_bash'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1156_bash() },\n    a1 = { SELECT\
+    \ *, 'Custom.MITRE.T1156_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1156_sh()\
+    \ },\n    a2 = { SELECT *, 'Custom.MITRE.T1156_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1156_python() },\n    a3 = { SELECT *, 'Custom.MITRE.T1156_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1156_perl() },\n    a4 = { SELECT\
+    \ *, 'Custom.MITRE.T1156_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1156_ruby()\
+    \ },\n    a5 = { SELECT *, 'Custom.MITRE.T1156__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1156__tmp_X() },\n    a6 = { SELECT *, 'Custom.MITRE.T1156__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1156__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a7 = { SELECT *, 'Custom.MITRE.T1156__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1156__Library_LaunchAgents_X() },\n    a8 = { SELECT\
+    \ *, 'Custom.MITRE.T1156__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1156__Library_LaunchDaemons_X()\
+    \ },\n    a9 = { SELECT *, 'Custom.MITRE.T1156_persistence' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1156_persistence() },\n    a10 = { SELECT *, 'Custom.MITRE.T1087_bash'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1087_bash() },\n    a11 = { SELECT\
+    \ *, 'Custom.MITRE.T1087_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1087_sh()\
+    \ },\n    a12 = { SELECT *, 'Custom.MITRE.T1087_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1087_python() },\n    a13 = { SELECT *, 'Custom.MITRE.T1087_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1087_perl() },\n    a14 = { SELECT\
+    \ *, 'Custom.MITRE.T1087_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1087_ruby()\
+    \ },\n    a15 = { SELECT *, 'Custom.MITRE.T1087__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1087__tmp_X() },\n    a16 = { SELECT *, 'Custom.MITRE.T1087__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1087__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a17 = { SELECT *, 'Custom.MITRE.T1087__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1087__Library_LaunchAgents_X() },\n    a18 = { SELECT\
+    \ *, 'Custom.MITRE.T1087__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1087__Library_LaunchDaemons_X()\
+    \ },\n    a19 = { SELECT *, 'Custom.MITRE.T1155_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1155_bash()\
+    \ },\n    a20 = { SELECT *, 'Custom.MITRE.T1155_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1155_sh()\
+    \ },\n    a21 = { SELECT *, 'Custom.MITRE.T1155_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1155_python() },\n    a22 = { SELECT *, 'Custom.MITRE.T1155_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1155_perl() },\n    a23 = { SELECT\
+    \ *, 'Custom.MITRE.T1155_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1155_ruby()\
+    \ },\n    a24 = { SELECT *, 'Custom.MITRE.T1017_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1017_bash()\
+    \ },\n    a25 = { SELECT *, 'Custom.MITRE.T1017_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1017_sh()\
+    \ },\n    a26 = { SELECT *, 'Custom.MITRE.T1017_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1017_python() },\n    a27 = { SELECT *, 'Custom.MITRE.T1017_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1017_perl() },\n    a28 = { SELECT\
+    \ *, 'Custom.MITRE.T1017_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1017_ruby()\
+    \ },\n    a29 = { SELECT *, 'Custom.MITRE.T1010_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1010_bash()\
+    \ },\n    a30 = { SELECT *, 'Custom.MITRE.T1010_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1010_sh()\
+    \ },\n    a31 = { SELECT *, 'Custom.MITRE.T1010_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1010_python() },\n    a32 = { SELECT *, 'Custom.MITRE.T1010_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1010_perl() },\n    a33 = { SELECT\
+    \ *, 'Custom.MITRE.T1010_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1010_ruby()\
+    \ },\n    a34 = { SELECT *, 'Custom.MITRE.T1123_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1123_bash()\
+    \ },\n    a35 = { SELECT *, 'Custom.MITRE.T1123_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1123_sh()\
+    \ },\n    a36 = { SELECT *, 'Custom.MITRE.T1123_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1123_python() },\n    a37 = { SELECT *, 'Custom.MITRE.T1123_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1123_perl() },\n    a38 = { SELECT\
+    \ *, 'Custom.MITRE.T1123_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1123_ruby()\
+    \ },\n    a39 = { SELECT *, 'Custom.MITRE.T1123__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1123__tmp_X() },\n    a40 = { SELECT *, 'Custom.MITRE.T1123__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1123__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a41 = { SELECT *, 'Custom.MITRE.T1123__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1123__Library_LaunchAgents_X() },\n    a42 = { SELECT\
+    \ *, 'Custom.MITRE.T1123__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1123__Library_LaunchDaemons_X()\
+    \ },\n    a43 = { SELECT *, 'Custom.MITRE.T1119_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1119_bash()\
+    \ },\n    a44 = { SELECT *, 'Custom.MITRE.T1119_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1119_sh()\
+    \ },\n    a45 = { SELECT *, 'Custom.MITRE.T1119_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1119_python() },\n    a46 = { SELECT *, 'Custom.MITRE.T1119_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1119_perl() },\n    a47 = { SELECT\
+    \ *, 'Custom.MITRE.T1119_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1119_ruby()\
+    \ },\n    a48 = { SELECT *, 'Custom.MITRE.T1119__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1119__tmp_X() },\n    a49 = { SELECT *, 'Custom.MITRE.T1119__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1119__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a50 = { SELECT *, 'Custom.MITRE.T1119__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1119__Library_LaunchAgents_X() },\n    a51 = { SELECT\
+    \ *, 'Custom.MITRE.T1119__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1119__Library_LaunchDaemons_X()\
+    \ },\n    a52 = { SELECT *, 'Custom.MITRE.T1020_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1020_bash()\
+    \ },\n    a53 = { SELECT *, 'Custom.MITRE.T1020_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1020_sh()\
+    \ },\n    a54 = { SELECT *, 'Custom.MITRE.T1020_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1020_python() },\n    a55 = { SELECT *, 'Custom.MITRE.T1020_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1020_perl() },\n    a56 = { SELECT\
+    \ *, 'Custom.MITRE.T1020_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1020_ruby()\
+    \ },\n    a57 = { SELECT *, 'Custom.MITRE.T1020__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1020__tmp_X() },\n    a58 = { SELECT *, 'Custom.MITRE.T1020__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1020__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a59 = { SELECT *, 'Custom.MITRE.T1020__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1020__Library_LaunchAgents_X() },\n    a60 = { SELECT\
+    \ *, 'Custom.MITRE.T1020__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1020__Library_LaunchDaemons_X()\
+    \ },\n    a61 = { SELECT *, 'Custom.MITRE.T1139__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1139__tmp_X() },\n    a62 = { SELECT *, 'Custom.MITRE.T1139__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1139__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a63 = { SELECT *, 'Custom.MITRE.T1139__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1139__Library_LaunchAgents_X() },\n    a64 = { SELECT\
+    \ *, 'Custom.MITRE.T1139__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1139__Library_LaunchDaemons_X()\
+    \ },\n    a65 = { SELECT *, 'Custom.MITRE.T1009_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1009_bash()\
+    \ },\n    a66 = { SELECT *, 'Custom.MITRE.T1009_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1009_sh()\
+    \ },\n    a67 = { SELECT *, 'Custom.MITRE.T1009_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1009_python() },\n    a68 = { SELECT *, 'Custom.MITRE.T1009_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1009_perl() },\n    a69 = { SELECT\
+    \ *, 'Custom.MITRE.T1009_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1009_ruby()\
+    \ },\n    a70 = { SELECT *, 'Custom.MITRE.T1009__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1009__tmp_X() },\n    a71 = { SELECT *, 'Custom.MITRE.T1009__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1009__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a72 = { SELECT *, 'Custom.MITRE.T1009__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1009__Library_LaunchAgents_X() },\n    a73 = { SELECT\
+    \ *, 'Custom.MITRE.T1009__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1009__Library_LaunchDaemons_X()\
+    \ },\n    a74 = { SELECT *, 'Custom.MITRE.T1176__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1176__tmp_X() },\n    a75 = { SELECT *, 'Custom.MITRE.T1176__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1176__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a76 = { SELECT *, 'Custom.MITRE.T1176__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1176__Library_LaunchAgents_X() },\n    a77 = { SELECT\
+    \ *, 'Custom.MITRE.T1176__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1176__Library_LaunchDaemons_X()\
+    \ },\n    a78 = { SELECT *, 'Custom.MITRE.T1176_persistence' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1176_persistence() },\n    a79 = { SELECT *, 'Custom.MITRE.T1146__tmp_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1146__tmp_X() },\n    a80 = {\
+    \ SELECT *, 'Custom.MITRE.T1146__Users_X_Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1146__Users_X_Library_LaunchAgents_X() },\n    a81\
+    \ = { SELECT *, 'Custom.MITRE.T1146__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1146__Library_LaunchAgents_X() },\n    a82 = { SELECT\
+    \ *, 'Custom.MITRE.T1146__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1146__Library_LaunchDaemons_X()\
+    \ },\n    a83 = { SELECT *, 'Custom.MITRE.T1116_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1116_bash()\
+    \ },\n    a84 = { SELECT *, 'Custom.MITRE.T1116_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1116_sh()\
+    \ },\n    a85 = { SELECT *, 'Custom.MITRE.T1116_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1116_python() },\n    a86 = { SELECT *, 'Custom.MITRE.T1116_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1116_perl() },\n    a87 = { SELECT\
+    \ *, 'Custom.MITRE.T1116_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1116_ruby()\
+    \ },\n    a88 = { SELECT *, 'Custom.MITRE.T1116__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1116__tmp_X() },\n    a89 = { SELECT *, 'Custom.MITRE.T1116__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1116__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a90 = { SELECT *, 'Custom.MITRE.T1116__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1116__Library_LaunchAgents_X() },\n    a91 = { SELECT\
+    \ *, 'Custom.MITRE.T1116__Library_LaunchDaemons_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1116__Library_LaunchDaemons_X()\
+    \ },\n    a92 = { SELECT *, 'Custom.MITRE.T1059_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1059_bash()\
+    \ },\n    a93 = { SELECT *, 'Custom.MITRE.T1059_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1059_sh()\
+    \ },\n    a94 = { SELECT *, 'Custom.MITRE.T1059_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1059_python() },\n    a95 = { SELECT *, 'Custom.MITRE.T1059_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1059_perl() },\n    a96 = { SELECT\
+    \ *, 'Custom.MITRE.T1059_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1059_ruby()\
+    \ },\n    a97 = { SELECT *, 'Custom.MITRE.T1092_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1092_bash()\
+    \ },\n    a98 = { SELECT *, 'Custom.MITRE.T1092_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1092_sh()\
+    \ },\n    a99 = { SELECT *, 'Custom.MITRE.T1092_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1092_python() },\n    a100 = { SELECT *, 'Custom.MITRE.T1092_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1092_perl() },\n    a101 = { SELECT\
+    \ *, 'Custom.MITRE.T1092_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1092_ruby()\
+    \ },\n    a102 = { SELECT *, 'Custom.MITRE.T1092__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1092__tmp_X() },\n    a103 = { SELECT *, 'Custom.MITRE.T1092__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1092__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a104 = { SELECT *, 'Custom.MITRE.T1092__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1092__Library_LaunchAgents_X() },\n    a105 = {\
+    \ SELECT *, 'Custom.MITRE.T1092__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1092__Library_LaunchDaemons_X() },\n    a106 = { SELECT\
+    \ *, 'Custom.MITRE.T1090_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1090_bash()\
+    \ },\n    a107 = { SELECT *, 'Custom.MITRE.T1090_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1090_sh()\
+    \ },\n    a108 = { SELECT *, 'Custom.MITRE.T1090_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1090_python() },\n    a109 = { SELECT *, 'Custom.MITRE.T1090_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1090_perl() },\n    a110 = { SELECT\
+    \ *, 'Custom.MITRE.T1090_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1090_ruby()\
+    \ },\n    a111 = { SELECT *, 'Custom.MITRE.T1136__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1136__tmp_X() },\n    a112 = { SELECT *, 'Custom.MITRE.T1136__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1136__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a113 = { SELECT *, 'Custom.MITRE.T1136__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1136__Library_LaunchAgents_X() },\n    a114 = {\
+    \ SELECT *, 'Custom.MITRE.T1136__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1136__Library_LaunchDaemons_X() },\n    a115 = { SELECT\
+    \ *, 'Custom.MITRE.T1136_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1136_persistence()\
+    \ },\n    a116 = { SELECT *, 'Custom.MITRE.T1081_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1081_bash() },\n    a117 = { SELECT *, 'Custom.MITRE.T1081_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1081_sh() },\n    a118 = { SELECT\
+    \ *, 'Custom.MITRE.T1081_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1081_python()\
+    \ },\n    a119 = { SELECT *, 'Custom.MITRE.T1081_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1081_perl() },\n    a120 = { SELECT *, 'Custom.MITRE.T1081_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1081_ruby() },\n    a121 = { SELECT\
+    \ *, 'Custom.MITRE.T1081__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1081__tmp_X()\
+    \ },\n    a122 = { SELECT *, 'Custom.MITRE.T1081__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1081__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a123 = { SELECT *, 'Custom.MITRE.T1081__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1081__Library_LaunchAgents_X() },\n    a124 = {\
+    \ SELECT *, 'Custom.MITRE.T1081__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1081__Library_LaunchDaemons_X() },\n    a125 = { SELECT\
+    \ *, 'Custom.MITRE.T1002_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1002_bash()\
+    \ },\n    a126 = { SELECT *, 'Custom.MITRE.T1002_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1002_sh()\
+    \ },\n    a127 = { SELECT *, 'Custom.MITRE.T1002_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1002_python() },\n    a128 = { SELECT *, 'Custom.MITRE.T1002_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1002_perl() },\n    a129 = { SELECT\
+    \ *, 'Custom.MITRE.T1002_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1002_ruby()\
+    \ },\n    a130 = { SELECT *, 'Custom.MITRE.T1002__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1002__tmp_X() },\n    a131 = { SELECT *, 'Custom.MITRE.T1002__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1002__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a132 = { SELECT *, 'Custom.MITRE.T1002__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1002__Library_LaunchAgents_X() },\n    a133 = {\
+    \ SELECT *, 'Custom.MITRE.T1002__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1002__Library_LaunchDaemons_X() },\n    a134 = { SELECT\
+    \ *, 'Custom.MITRE.T1022_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1022_bash()\
+    \ },\n    a135 = { SELECT *, 'Custom.MITRE.T1022_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1022_sh()\
+    \ },\n    a136 = { SELECT *, 'Custom.MITRE.T1022_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1022_python() },\n    a137 = { SELECT *, 'Custom.MITRE.T1022_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1022_perl() },\n    a138 = { SELECT\
+    \ *, 'Custom.MITRE.T1022_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1022_ruby()\
+    \ },\n    a139 = { SELECT *, 'Custom.MITRE.T1022__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1022__tmp_X() },\n    a140 = { SELECT *, 'Custom.MITRE.T1022__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1022__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a141 = { SELECT *, 'Custom.MITRE.T1022__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1022__Library_LaunchAgents_X() },\n    a142 = {\
+    \ SELECT *, 'Custom.MITRE.T1022__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1022__Library_LaunchDaemons_X() },\n    a143 = { SELECT\
+    \ *, 'Custom.MITRE.T1074_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1074_bash()\
+    \ },\n    a144 = { SELECT *, 'Custom.MITRE.T1074_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1074_sh()\
+    \ },\n    a145 = { SELECT *, 'Custom.MITRE.T1074_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1074_python() },\n    a146 = { SELECT *, 'Custom.MITRE.T1074_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1074_perl() },\n    a147 = { SELECT\
+    \ *, 'Custom.MITRE.T1074_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1074_ruby()\
+    \ },\n    a148 = { SELECT *, 'Custom.MITRE.T1074__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1074__tmp_X() },\n    a149 = { SELECT *, 'Custom.MITRE.T1074__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1074__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a150 = { SELECT *, 'Custom.MITRE.T1074__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1074__Library_LaunchAgents_X() },\n    a151 = {\
+    \ SELECT *, 'Custom.MITRE.T1074__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1074__Library_LaunchDaemons_X() },\n    a152 = { SELECT\
+    \ *, 'Custom.MITRE.T1030_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1030_bash()\
+    \ },\n    a153 = { SELECT *, 'Custom.MITRE.T1030_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1030_sh()\
+    \ },\n    a154 = { SELECT *, 'Custom.MITRE.T1030_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1030_python() },\n    a155 = { SELECT *, 'Custom.MITRE.T1030_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1030_perl() },\n    a156 = { SELECT\
+    \ *, 'Custom.MITRE.T1030_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1030_ruby()\
+    \ },\n    a157 = { SELECT *, 'Custom.MITRE.T1030__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1030__tmp_X() },\n    a158 = { SELECT *, 'Custom.MITRE.T1030__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1030__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a159 = { SELECT *, 'Custom.MITRE.T1030__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1030__Library_LaunchAgents_X() },\n    a160 = {\
+    \ SELECT *, 'Custom.MITRE.T1030__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1030__Library_LaunchDaemons_X() },\n    a161 = { SELECT\
+    \ *, 'Custom.MITRE.T1005_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1005_bash()\
+    \ },\n    a162 = { SELECT *, 'Custom.MITRE.T1005_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1005_sh()\
+    \ },\n    a163 = { SELECT *, 'Custom.MITRE.T1005_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1005_python() },\n    a164 = { SELECT *, 'Custom.MITRE.T1005_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1005_perl() },\n    a165 = { SELECT\
+    \ *, 'Custom.MITRE.T1005_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1005_ruby()\
+    \ },\n    a166 = { SELECT *, 'Custom.MITRE.T1005__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1005__tmp_X() },\n    a167 = { SELECT *, 'Custom.MITRE.T1005__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1005__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a168 = { SELECT *, 'Custom.MITRE.T1005__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1005__Library_LaunchAgents_X() },\n    a169 = {\
+    \ SELECT *, 'Custom.MITRE.T1005__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1005__Library_LaunchDaemons_X() },\n    a170 = { SELECT\
+    \ *, 'Custom.MITRE.T1039_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1039_bash()\
+    \ },\n    a171 = { SELECT *, 'Custom.MITRE.T1039_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1039_sh()\
+    \ },\n    a172 = { SELECT *, 'Custom.MITRE.T1039_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1039_python() },\n    a173 = { SELECT *, 'Custom.MITRE.T1039_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1039_perl() },\n    a174 = { SELECT\
+    \ *, 'Custom.MITRE.T1039_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1039_ruby()\
+    \ },\n    a175 = { SELECT *, 'Custom.MITRE.T1039__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1039__tmp_X() },\n    a176 = { SELECT *, 'Custom.MITRE.T1039__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1039__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a177 = { SELECT *, 'Custom.MITRE.T1039__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1039__Library_LaunchAgents_X() },\n    a178 = {\
+    \ SELECT *, 'Custom.MITRE.T1039__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1039__Library_LaunchDaemons_X() },\n    a179 = { SELECT\
+    \ *, 'Custom.MITRE.T1025_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1025_bash()\
+    \ },\n    a180 = { SELECT *, 'Custom.MITRE.T1025_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1025_sh()\
+    \ },\n    a181 = { SELECT *, 'Custom.MITRE.T1025_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1025_python() },\n    a182 = { SELECT *, 'Custom.MITRE.T1025_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1025_perl() },\n    a183 = { SELECT\
+    \ *, 'Custom.MITRE.T1025_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1025_ruby()\
+    \ },\n    a184 = { SELECT *, 'Custom.MITRE.T1025__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1025__tmp_X() },\n    a185 = { SELECT *, 'Custom.MITRE.T1025__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1025__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a186 = { SELECT *, 'Custom.MITRE.T1025__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1025__Library_LaunchAgents_X() },\n    a187 = {\
+    \ SELECT *, 'Custom.MITRE.T1025__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1025__Library_LaunchDaemons_X() },\n    a188 = { SELECT\
+    \ *, 'Custom.MITRE.T1089_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1089_bash()\
+    \ },\n    a189 = { SELECT *, 'Custom.MITRE.T1089_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1089_sh()\
+    \ },\n    a190 = { SELECT *, 'Custom.MITRE.T1089_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1089_python() },\n    a191 = { SELECT *, 'Custom.MITRE.T1089_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1089_perl() },\n    a192 = { SELECT\
+    \ *, 'Custom.MITRE.T1089_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1089_ruby()\
+    \ },\n    a193 = { SELECT *, 'Custom.MITRE.T1089__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1089__tmp_X() },\n    a194 = { SELECT *, 'Custom.MITRE.T1089__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1089__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a195 = { SELECT *, 'Custom.MITRE.T1089__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1089__Library_LaunchAgents_X() },\n    a196 = {\
+    \ SELECT *, 'Custom.MITRE.T1089__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1089__Library_LaunchDaemons_X() },\n    a197 = { SELECT\
+    \ *, 'Custom.MITRE.T1089_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1089_persistence()\
+    \ },\n    a198 = { SELECT *, 'Custom.MITRE.T1157_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1157_bash() },\n    a199 = { SELECT *, 'Custom.MITRE.T1157_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1157_sh() },\n    a200 = { SELECT\
+    \ *, 'Custom.MITRE.T1157_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1157_python()\
+    \ },\n    a201 = { SELECT *, 'Custom.MITRE.T1157_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1157_perl() },\n    a202 = { SELECT *, 'Custom.MITRE.T1157_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1157_ruby() },\n    a203 = { SELECT\
+    \ *, 'Custom.MITRE.T1157__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1157__tmp_X()\
+    \ },\n    a204 = { SELECT *, 'Custom.MITRE.T1157__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1157__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a205 = { SELECT *, 'Custom.MITRE.T1157__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1157__Library_LaunchAgents_X() },\n    a206 = {\
+    \ SELECT *, 'Custom.MITRE.T1157__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1157__Library_LaunchDaemons_X() },\n    a207 = { SELECT\
+    \ *, 'Custom.MITRE.T1157_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1157_persistence()\
+    \ },\n    a208 = { SELECT *, 'Custom.MITRE.T1052_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1052_bash() },\n    a209 = { SELECT *, 'Custom.MITRE.T1052_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1052_sh() },\n    a210 = { SELECT\
+    \ *, 'Custom.MITRE.T1052_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1052_python()\
+    \ },\n    a211 = { SELECT *, 'Custom.MITRE.T1052_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1052_perl() },\n    a212 = { SELECT *, 'Custom.MITRE.T1052_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1052_ruby() },\n    a213 = { SELECT\
+    \ *, 'Custom.MITRE.T1052__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1052__tmp_X()\
+    \ },\n    a214 = { SELECT *, 'Custom.MITRE.T1052__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1052__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a215 = { SELECT *, 'Custom.MITRE.T1052__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1052__Library_LaunchAgents_X() },\n    a216 = {\
+    \ SELECT *, 'Custom.MITRE.T1052__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1052__Library_LaunchDaemons_X() },\n    a217 = { SELECT\
+    \ *, 'Custom.MITRE.T1068_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1068_bash()\
+    \ },\n    a218 = { SELECT *, 'Custom.MITRE.T1068_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1068_sh()\
+    \ },\n    a219 = { SELECT *, 'Custom.MITRE.T1068_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1068_python() },\n    a220 = { SELECT *, 'Custom.MITRE.T1068_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1068_perl() },\n    a221 = { SELECT\
+    \ *, 'Custom.MITRE.T1068_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1068_ruby()\
+    \ },\n    a222 = { SELECT *, 'Custom.MITRE.T1068__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1068__tmp_X() },\n    a223 = { SELECT *, 'Custom.MITRE.T1068__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1068__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a224 = { SELECT *, 'Custom.MITRE.T1068__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1068__Library_LaunchAgents_X() },\n    a225 = {\
+    \ SELECT *, 'Custom.MITRE.T1068__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1068__Library_LaunchDaemons_X() },\n    a226 = { SELECT\
+    \ *, 'Custom.MITRE.T1107_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1107_bash()\
+    \ },\n    a227 = { SELECT *, 'Custom.MITRE.T1107_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1107_sh()\
+    \ },\n    a228 = { SELECT *, 'Custom.MITRE.T1107_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1107_python() },\n    a229 = { SELECT *, 'Custom.MITRE.T1107_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1107_perl() },\n    a230 = { SELECT\
+    \ *, 'Custom.MITRE.T1107_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1107_ruby()\
+    \ },\n    a231 = { SELECT *, 'Custom.MITRE.T1107__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1107__tmp_X() },\n    a232 = { SELECT *, 'Custom.MITRE.T1107__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1107__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a233 = { SELECT *, 'Custom.MITRE.T1107__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1107__Library_LaunchAgents_X() },\n    a234 = {\
+    \ SELECT *, 'Custom.MITRE.T1107__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1107__Library_LaunchDaemons_X() },\n    a235 = { SELECT\
+    \ *, 'Custom.MITRE.T1083_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1083_bash()\
+    \ },\n    a236 = { SELECT *, 'Custom.MITRE.T1083_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1083_sh()\
+    \ },\n    a237 = { SELECT *, 'Custom.MITRE.T1083_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1083_python() },\n    a238 = { SELECT *, 'Custom.MITRE.T1083_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1083_perl() },\n    a239 = { SELECT\
+    \ *, 'Custom.MITRE.T1083_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1083_ruby()\
+    \ },\n    a240 = { SELECT *, 'Custom.MITRE.T1083__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1083__tmp_X() },\n    a241 = { SELECT *, 'Custom.MITRE.T1083__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1083__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a242 = { SELECT *, 'Custom.MITRE.T1083__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1083__Library_LaunchAgents_X() },\n    a243 = {\
+    \ SELECT *, 'Custom.MITRE.T1083__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1083__Library_LaunchDaemons_X() },\n    a244 = { SELECT\
+    \ *, 'Custom.MITRE.T1144_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1144_bash()\
+    \ },\n    a245 = { SELECT *, 'Custom.MITRE.T1144_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1144_sh()\
+    \ },\n    a246 = { SELECT *, 'Custom.MITRE.T1144_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1144_python() },\n    a247 = { SELECT *, 'Custom.MITRE.T1144_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1144_perl() },\n    a248 = { SELECT\
+    \ *, 'Custom.MITRE.T1144_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1144_ruby()\
+    \ },\n    a249 = { SELECT *, 'Custom.MITRE.T1144__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1144__tmp_X() },\n    a250 = { SELECT *, 'Custom.MITRE.T1144__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1144__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a251 = { SELECT *, 'Custom.MITRE.T1144__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1144__Library_LaunchAgents_X() },\n    a252 = {\
+    \ SELECT *, 'Custom.MITRE.T1144__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1144__Library_LaunchDaemons_X() },\n    a253 = { SELECT\
+    \ *, 'Custom.MITRE.T1061_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1061_bash()\
+    \ },\n    a254 = { SELECT *, 'Custom.MITRE.T1061_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1061_sh()\
+    \ },\n    a255 = { SELECT *, 'Custom.MITRE.T1061_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1061_python() },\n    a256 = { SELECT *, 'Custom.MITRE.T1061_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1061_perl() },\n    a257 = { SELECT\
+    \ *, 'Custom.MITRE.T1061_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1061_ruby()\
+    \ },\n    a258 = { SELECT *, 'Custom.MITRE.T1061__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1061__tmp_X() },\n    a259 = { SELECT *, 'Custom.MITRE.T1061__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1061__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a260 = { SELECT *, 'Custom.MITRE.T1061__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1061__Library_LaunchAgents_X() },\n    a261 = {\
+    \ SELECT *, 'Custom.MITRE.T1061__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1061__Library_LaunchDaemons_X() },\n    a262 = { SELECT\
+    \ *, 'Custom.MITRE.T1148__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1148__tmp_X()\
+    \ },\n    a263 = { SELECT *, 'Custom.MITRE.T1148__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1148__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a264 = { SELECT *, 'Custom.MITRE.T1148__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1148__Library_LaunchAgents_X() },\n    a265 = {\
+    \ SELECT *, 'Custom.MITRE.T1148__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1148__Library_LaunchDaemons_X() },\n    a266 = { SELECT\
+    \ *, 'Custom.MITRE.T1158_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1158_bash()\
+    \ },\n    a267 = { SELECT *, 'Custom.MITRE.T1158_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1158_sh()\
+    \ },\n    a268 = { SELECT *, 'Custom.MITRE.T1158_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1158_python() },\n    a269 = { SELECT *, 'Custom.MITRE.T1158_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1158_perl() },\n    a270 = { SELECT\
+    \ *, 'Custom.MITRE.T1158_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1158_ruby()\
+    \ },\n    a271 = { SELECT *, 'Custom.MITRE.T1158__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1158__tmp_X() },\n    a272 = { SELECT *, 'Custom.MITRE.T1158__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1158__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a273 = { SELECT *, 'Custom.MITRE.T1158__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1158__Library_LaunchAgents_X() },\n    a274 = {\
+    \ SELECT *, 'Custom.MITRE.T1158__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1158__Library_LaunchDaemons_X() },\n    a275 = { SELECT\
+    \ *, 'Custom.MITRE.T1158_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1158_persistence()\
+    \ },\n    a276 = { SELECT *, 'Custom.MITRE.T1147__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1147__tmp_X() },\n    a277 = { SELECT *, 'Custom.MITRE.T1147__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1147__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a278 = { SELECT *, 'Custom.MITRE.T1147__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1147__Library_LaunchAgents_X() },\n    a279 = {\
+    \ SELECT *, 'Custom.MITRE.T1147__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1147__Library_LaunchDaemons_X() },\n    a280 = { SELECT\
+    \ *, 'Custom.MITRE.T1143_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1143_bash()\
+    \ },\n    a281 = { SELECT *, 'Custom.MITRE.T1143_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1143_sh()\
+    \ },\n    a282 = { SELECT *, 'Custom.MITRE.T1143_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1143_python() },\n    a283 = { SELECT *, 'Custom.MITRE.T1143_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1143_perl() },\n    a284 = { SELECT\
+    \ *, 'Custom.MITRE.T1143_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1143_ruby()\
+    \ },\n    a285 = { SELECT *, 'Custom.MITRE.T1143__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1143__tmp_X() },\n    a286 = { SELECT *, 'Custom.MITRE.T1143__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1143__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a287 = { SELECT *, 'Custom.MITRE.T1143__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1143__Library_LaunchAgents_X() },\n    a288 = {\
+    \ SELECT *, 'Custom.MITRE.T1143__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1143__Library_LaunchDaemons_X() },\n    a289 = { SELECT\
+    \ *, 'Custom.MITRE.T1066__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1066__tmp_X()\
+    \ },\n    a290 = { SELECT *, 'Custom.MITRE.T1066__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1066__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a291 = { SELECT *, 'Custom.MITRE.T1066__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1066__Library_LaunchAgents_X() },\n    a292 = {\
+    \ SELECT *, 'Custom.MITRE.T1066__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1066__Library_LaunchDaemons_X() },\n    a293 = { SELECT\
+    \ *, 'Custom.MITRE.T1070__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1070__tmp_X()\
+    \ },\n    a294 = { SELECT *, 'Custom.MITRE.T1070__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1070__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a295 = { SELECT *, 'Custom.MITRE.T1070__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1070__Library_LaunchAgents_X() },\n    a296 = {\
+    \ SELECT *, 'Custom.MITRE.T1070__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1070__Library_LaunchDaemons_X() },\n    a297 = { SELECT\
+    \ *, 'Custom.MITRE.T1056_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1056_bash()\
+    \ },\n    a298 = { SELECT *, 'Custom.MITRE.T1056_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1056_sh()\
+    \ },\n    a299 = { SELECT *, 'Custom.MITRE.T1056_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1056_python() },\n    a300 = { SELECT *, 'Custom.MITRE.T1056_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1056_perl() },\n    a301 = { SELECT\
+    \ *, 'Custom.MITRE.T1056_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1056_ruby()\
+    \ },\n    a302 = { SELECT *, 'Custom.MITRE.T1056__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1056__tmp_X() },\n    a303 = { SELECT *, 'Custom.MITRE.T1056__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1056__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a304 = { SELECT *, 'Custom.MITRE.T1056__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1056__Library_LaunchAgents_X() },\n    a305 = {\
+    \ SELECT *, 'Custom.MITRE.T1056__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1056__Library_LaunchDaemons_X() },\n    a306 = { SELECT\
+    \ *, 'Custom.MITRE.T1141_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1141_bash()\
+    \ },\n    a307 = { SELECT *, 'Custom.MITRE.T1141_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1141_sh()\
+    \ },\n    a308 = { SELECT *, 'Custom.MITRE.T1141_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1141_python() },\n    a309 = { SELECT *, 'Custom.MITRE.T1141_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1141_perl() },\n    a310 = { SELECT\
+    \ *, 'Custom.MITRE.T1141_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1141_ruby()\
+    \ },\n    a311 = { SELECT *, 'Custom.MITRE.T1142_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1142_bash() },\n    a312 = { SELECT *, 'Custom.MITRE.T1142_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1142_sh() },\n    a313 = { SELECT\
+    \ *, 'Custom.MITRE.T1142_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1142_python()\
+    \ },\n    a314 = { SELECT *, 'Custom.MITRE.T1142_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1142_perl() },\n    a315 = { SELECT *, 'Custom.MITRE.T1142_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1142_ruby() },\n    a316 = { SELECT\
+    \ *, 'Custom.MITRE.T1142__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1142__tmp_X()\
+    \ },\n    a317 = { SELECT *, 'Custom.MITRE.T1142__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1142__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a318 = { SELECT *, 'Custom.MITRE.T1142__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1142__Library_LaunchAgents_X() },\n    a319 = {\
+    \ SELECT *, 'Custom.MITRE.T1142__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1142__Library_LaunchDaemons_X() },\n    a320 = { SELECT\
+    \ *, 'Custom.MITRE.T1161_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1161_bash()\
+    \ },\n    a321 = { SELECT *, 'Custom.MITRE.T1161_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1161_sh()\
+    \ },\n    a322 = { SELECT *, 'Custom.MITRE.T1161_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1161_python() },\n    a323 = { SELECT *, 'Custom.MITRE.T1161_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1161_perl() },\n    a324 = { SELECT\
+    \ *, 'Custom.MITRE.T1161_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1161_ruby()\
+    \ },\n    a325 = { SELECT *, 'Custom.MITRE.T1161__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1161__tmp_X() },\n    a326 = { SELECT *, 'Custom.MITRE.T1161__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1161__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a327 = { SELECT *, 'Custom.MITRE.T1161__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1161__Library_LaunchAgents_X() },\n    a328 = {\
+    \ SELECT *, 'Custom.MITRE.T1161__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1161__Library_LaunchDaemons_X() },\n    a329 = { SELECT\
+    \ *, 'Custom.MITRE.T1149_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1149_bash()\
+    \ },\n    a330 = { SELECT *, 'Custom.MITRE.T1149_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1149_sh()\
+    \ },\n    a331 = { SELECT *, 'Custom.MITRE.T1149_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1149_python() },\n    a332 = { SELECT *, 'Custom.MITRE.T1149_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1149_perl() },\n    a333 = { SELECT\
+    \ *, 'Custom.MITRE.T1149_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1149_ruby()\
+    \ },\n    a334 = { SELECT *, 'Custom.MITRE.T1149__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1149__tmp_X() },\n    a335 = { SELECT *, 'Custom.MITRE.T1149__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1149__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a336 = { SELECT *, 'Custom.MITRE.T1149__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1149__Library_LaunchAgents_X() },\n    a337 = {\
+    \ SELECT *, 'Custom.MITRE.T1149__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1149__Library_LaunchDaemons_X() },\n    a338 = { SELECT\
+    \ *, 'Custom.MITRE.T1159_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1159_bash()\
+    \ },\n    a339 = { SELECT *, 'Custom.MITRE.T1159_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1159_sh()\
+    \ },\n    a340 = { SELECT *, 'Custom.MITRE.T1159_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1159_python() },\n    a341 = { SELECT *, 'Custom.MITRE.T1159_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1159_perl() },\n    a342 = { SELECT\
+    \ *, 'Custom.MITRE.T1159_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1159_ruby()\
+    \ },\n    a343 = { SELECT *, 'Custom.MITRE.T1159__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1159__tmp_X() },\n    a344 = { SELECT *, 'Custom.MITRE.T1159__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1159__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a345 = { SELECT *, 'Custom.MITRE.T1159__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1159__Library_LaunchAgents_X() },\n    a346 = {\
+    \ SELECT *, 'Custom.MITRE.T1159__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1159__Library_LaunchDaemons_X() },\n    a347 = { SELECT\
+    \ *, 'Custom.MITRE.T1159_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1159_persistence()\
+    \ },\n    a348 = { SELECT *, 'Custom.MITRE.T1160_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1160_bash() },\n    a349 = { SELECT *, 'Custom.MITRE.T1160_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1160_sh() },\n    a350 = { SELECT\
+    \ *, 'Custom.MITRE.T1160_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1160_python()\
+    \ },\n    a351 = { SELECT *, 'Custom.MITRE.T1160_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1160_perl() },\n    a352 = { SELECT *, 'Custom.MITRE.T1160_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1160_ruby() },\n    a353 = { SELECT\
+    \ *, 'Custom.MITRE.T1160__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1160__tmp_X()\
+    \ },\n    a354 = { SELECT *, 'Custom.MITRE.T1160__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1160__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a355 = { SELECT *, 'Custom.MITRE.T1160__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1160__Library_LaunchAgents_X() },\n    a356 = {\
+    \ SELECT *, 'Custom.MITRE.T1160__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1160__Library_LaunchDaemons_X() },\n    a357 = { SELECT\
+    \ *, 'Custom.MITRE.T1160_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1160_persistence()\
+    \ },\n    a358 = { SELECT *, 'Custom.MITRE.T1152_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1152_bash() },\n    a359 = { SELECT *, 'Custom.MITRE.T1152_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1152_sh() },\n    a360 = { SELECT\
+    \ *, 'Custom.MITRE.T1152_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1152_python()\
+    \ },\n    a361 = { SELECT *, 'Custom.MITRE.T1152_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1152_perl() },\n    a362 = { SELECT *, 'Custom.MITRE.T1152_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1152_ruby() },\n    a363 = { SELECT\
+    \ *, 'Custom.MITRE.T1152__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1152__tmp_X()\
+    \ },\n    a364 = { SELECT *, 'Custom.MITRE.T1152__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1152__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a365 = { SELECT *, 'Custom.MITRE.T1152__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1152__Library_LaunchAgents_X() },\n    a366 = {\
+    \ SELECT *, 'Custom.MITRE.T1152__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1152__Library_LaunchDaemons_X() },\n    a367 = { SELECT\
+    \ *, 'Custom.MITRE.T1152_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1152_persistence()\
+    \ },\n    a368 = { SELECT *, 'Custom.MITRE.T1168_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1168_bash() },\n    a369 = { SELECT *, 'Custom.MITRE.T1168_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1168_sh() },\n    a370 = { SELECT\
+    \ *, 'Custom.MITRE.T1168_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1168_python()\
+    \ },\n    a371 = { SELECT *, 'Custom.MITRE.T1168_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1168_perl() },\n    a372 = { SELECT *, 'Custom.MITRE.T1168_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1168_ruby() },\n    a373 = { SELECT\
+    \ *, 'Custom.MITRE.T1168__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1168__tmp_X()\
+    \ },\n    a374 = { SELECT *, 'Custom.MITRE.T1168__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1168__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a375 = { SELECT *, 'Custom.MITRE.T1168__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1168__Library_LaunchAgents_X() },\n    a376 = {\
+    \ SELECT *, 'Custom.MITRE.T1168__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1168__Library_LaunchDaemons_X() },\n    a377 = { SELECT\
+    \ *, 'Custom.MITRE.T1168_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1168_persistence()\
+    \ },\n    a378 = { SELECT *, 'Custom.MITRE.T1162_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1162_bash() },\n    a379 = { SELECT *, 'Custom.MITRE.T1162_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1162_sh() },\n    a380 = { SELECT\
+    \ *, 'Custom.MITRE.T1162_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1162_python()\
+    \ },\n    a381 = { SELECT *, 'Custom.MITRE.T1162_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1162_perl() },\n    a382 = { SELECT *, 'Custom.MITRE.T1162_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1162_ruby() },\n    a383 = { SELECT\
+    \ *, 'Custom.MITRE.T1162__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1162__tmp_X()\
+    \ },\n    a384 = { SELECT *, 'Custom.MITRE.T1162__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1162__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a385 = { SELECT *, 'Custom.MITRE.T1162__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1162__Library_LaunchAgents_X() },\n    a386 = {\
+    \ SELECT *, 'Custom.MITRE.T1162__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1162__Library_LaunchDaemons_X() },\n    a387 = { SELECT\
+    \ *, 'Custom.MITRE.T1162_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1162_persistence()\
+    \ },\n    a388 = { SELECT *, 'Custom.MITRE.T1037_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1037_bash() },\n    a389 = { SELECT *, 'Custom.MITRE.T1037_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1037_sh() },\n    a390 = { SELECT\
+    \ *, 'Custom.MITRE.T1037_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1037_python()\
+    \ },\n    a391 = { SELECT *, 'Custom.MITRE.T1037_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1037_perl() },\n    a392 = { SELECT *, 'Custom.MITRE.T1037_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1037_ruby() },\n    a393 = { SELECT\
+    \ *, 'Custom.MITRE.T1037__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1037__tmp_X()\
+    \ },\n    a394 = { SELECT *, 'Custom.MITRE.T1037__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1037__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a395 = { SELECT *, 'Custom.MITRE.T1037__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1037__Library_LaunchAgents_X() },\n    a396 = {\
+    \ SELECT *, 'Custom.MITRE.T1037__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1037__Library_LaunchDaemons_X() },\n    a397 = { SELECT\
+    \ *, 'Custom.MITRE.T1037_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1037_persistence()\
+    \ },\n    a398 = { SELECT *, 'Custom.MITRE.T1036_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1036_bash() },\n    a399 = { SELECT *, 'Custom.MITRE.T1036_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1036_sh() },\n    a400 = { SELECT\
+    \ *, 'Custom.MITRE.T1036_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1036_python()\
+    \ },\n    a401 = { SELECT *, 'Custom.MITRE.T1036_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1036_perl() },\n    a402 = { SELECT *, 'Custom.MITRE.T1036_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1036_ruby() },\n    a403 = { SELECT\
+    \ *, 'Custom.MITRE.T1036__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1036__tmp_X()\
+    \ },\n    a404 = { SELECT *, 'Custom.MITRE.T1036__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1036__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a405 = { SELECT *, 'Custom.MITRE.T1036__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1036__Library_LaunchAgents_X() },\n    a406 = {\
+    \ SELECT *, 'Custom.MITRE.T1036__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1036__Library_LaunchDaemons_X() },\n    a407 = { SELECT\
+    \ *, 'Custom.MITRE.T1104_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1104_bash()\
+    \ },\n    a408 = { SELECT *, 'Custom.MITRE.T1104_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1104_sh()\
+    \ },\n    a409 = { SELECT *, 'Custom.MITRE.T1104_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1104_python() },\n    a410 = { SELECT *, 'Custom.MITRE.T1104_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1104_perl() },\n    a411 = { SELECT\
+    \ *, 'Custom.MITRE.T1104_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1104_ruby()\
+    \ },\n    a412 = { SELECT *, 'Custom.MITRE.T1104__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1104__tmp_X() },\n    a413 = { SELECT *, 'Custom.MITRE.T1104__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1104__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a414 = { SELECT *, 'Custom.MITRE.T1104__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1104__Library_LaunchAgents_X() },\n    a415 = {\
+    \ SELECT *, 'Custom.MITRE.T1104__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1104__Library_LaunchDaemons_X() },\n    a416 = { SELECT\
+    \ *, 'Custom.MITRE.T1046_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1046_bash()\
+    \ },\n    a417 = { SELECT *, 'Custom.MITRE.T1046_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1046_sh()\
+    \ },\n    a418 = { SELECT *, 'Custom.MITRE.T1046_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1046_python() },\n    a419 = { SELECT *, 'Custom.MITRE.T1046_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1046_perl() },\n    a420 = { SELECT\
+    \ *, 'Custom.MITRE.T1046_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1046_ruby()\
+    \ },\n    a421 = { SELECT *, 'Custom.MITRE.T1135_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1135_bash() },\n    a422 = { SELECT *, 'Custom.MITRE.T1135_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1135_sh() },\n    a423 = { SELECT\
+    \ *, 'Custom.MITRE.T1135_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1135_python()\
+    \ },\n    a424 = { SELECT *, 'Custom.MITRE.T1135_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1135_perl() },\n    a425 = { SELECT *, 'Custom.MITRE.T1135_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1135_ruby() },\n    a426 = { SELECT\
+    \ *, 'Custom.MITRE.T1135__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1135__tmp_X()\
+    \ },\n    a427 = { SELECT *, 'Custom.MITRE.T1135__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1135__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a428 = { SELECT *, 'Custom.MITRE.T1135__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1135__Library_LaunchAgents_X() },\n    a429 = {\
+    \ SELECT *, 'Custom.MITRE.T1135__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1135__Library_LaunchDaemons_X() },\n    a430 = { SELECT\
+    \ *, 'Custom.MITRE.T1027_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1027_bash()\
+    \ },\n    a431 = { SELECT *, 'Custom.MITRE.T1027_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1027_sh()\
+    \ },\n    a432 = { SELECT *, 'Custom.MITRE.T1027_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1027_python() },\n    a433 = { SELECT *, 'Custom.MITRE.T1027_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1027_perl() },\n    a434 = { SELECT\
+    \ *, 'Custom.MITRE.T1027_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1027_ruby()\
+    \ },\n    a435 = { SELECT *, 'Custom.MITRE.T1027__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1027__tmp_X() },\n    a436 = { SELECT *, 'Custom.MITRE.T1027__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1027__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a437 = { SELECT *, 'Custom.MITRE.T1027__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1027__Library_LaunchAgents_X() },\n    a438 = {\
+    \ SELECT *, 'Custom.MITRE.T1027__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1027__Library_LaunchDaemons_X() },\n    a439 = { SELECT\
+    \ *, 'Custom.MITRE.T1069_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1069_bash()\
+    \ },\n    a440 = { SELECT *, 'Custom.MITRE.T1069_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1069_sh()\
+    \ },\n    a441 = { SELECT *, 'Custom.MITRE.T1069_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1069_python() },\n    a442 = { SELECT *, 'Custom.MITRE.T1069_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1069_perl() },\n    a443 = { SELECT\
+    \ *, 'Custom.MITRE.T1069_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1069_ruby()\
+    \ },\n    a444 = { SELECT *, 'Custom.MITRE.T1150_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1150_bash() },\n    a445 = { SELECT *, 'Custom.MITRE.T1150_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1150_sh() },\n    a446 = { SELECT\
+    \ *, 'Custom.MITRE.T1150_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1150_python()\
+    \ },\n    a447 = { SELECT *, 'Custom.MITRE.T1150_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1150_perl() },\n    a448 = { SELECT *, 'Custom.MITRE.T1150_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1150_ruby() },\n    a449 = { SELECT\
+    \ *, 'Custom.MITRE.T1150__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1150__tmp_X()\
+    \ },\n    a450 = { SELECT *, 'Custom.MITRE.T1150__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1150__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a451 = { SELECT *, 'Custom.MITRE.T1150__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1150__Library_LaunchAgents_X() },\n    a452 = {\
+    \ SELECT *, 'Custom.MITRE.T1150__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1150__Library_LaunchDaemons_X() },\n    a453 = { SELECT\
+    \ *, 'Custom.MITRE.T1150_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1150_persistence()\
+    \ },\n    a454 = { SELECT *, 'Custom.MITRE.T1145__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1145__tmp_X() },\n    a455 = { SELECT *, 'Custom.MITRE.T1145__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1145__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a456 = { SELECT *, 'Custom.MITRE.T1145__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1145__Library_LaunchAgents_X() },\n    a457 = {\
+    \ SELECT *, 'Custom.MITRE.T1145__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1145__Library_LaunchDaemons_X() },\n    a458 = { SELECT\
+    \ *, 'Custom.MITRE.T1057_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1057_bash()\
+    \ },\n    a459 = { SELECT *, 'Custom.MITRE.T1057_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1057_sh()\
+    \ },\n    a460 = { SELECT *, 'Custom.MITRE.T1057_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1057_python() },\n    a461 = { SELECT *, 'Custom.MITRE.T1057_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1057_perl() },\n    a462 = { SELECT\
+    \ *, 'Custom.MITRE.T1057_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1057_ruby()\
+    \ },\n    a463 = { SELECT *, 'Custom.MITRE.T1055_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1055_bash() },\n    a464 = { SELECT *, 'Custom.MITRE.T1055_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1055_sh() },\n    a465 = { SELECT\
+    \ *, 'Custom.MITRE.T1055_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1055_python()\
+    \ },\n    a466 = { SELECT *, 'Custom.MITRE.T1055_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1055_perl() },\n    a467 = { SELECT *, 'Custom.MITRE.T1055_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1055_ruby() },\n    a468 = { SELECT\
+    \ *, 'Custom.MITRE.T1055__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1055__tmp_X()\
+    \ },\n    a469 = { SELECT *, 'Custom.MITRE.T1055__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1055__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a470 = { SELECT *, 'Custom.MITRE.T1055__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1055__Library_LaunchAgents_X() },\n    a471 = {\
+    \ SELECT *, 'Custom.MITRE.T1055__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1055__Library_LaunchDaemons_X() },\n    a472 = { SELECT\
+    \ *, 'Custom.MITRE.T1163_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1163_bash()\
+    \ },\n    a473 = { SELECT *, 'Custom.MITRE.T1163_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1163_sh()\
+    \ },\n    a474 = { SELECT *, 'Custom.MITRE.T1163_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1163_python() },\n    a475 = { SELECT *, 'Custom.MITRE.T1163_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1163_perl() },\n    a476 = { SELECT\
+    \ *, 'Custom.MITRE.T1163_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1163_ruby()\
+    \ },\n    a477 = { SELECT *, 'Custom.MITRE.T1163__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1163__tmp_X() },\n    a478 = { SELECT *, 'Custom.MITRE.T1163__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1163__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a479 = { SELECT *, 'Custom.MITRE.T1163__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1163__Library_LaunchAgents_X() },\n    a480 = {\
+    \ SELECT *, 'Custom.MITRE.T1163__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1163__Library_LaunchDaemons_X() },\n    a481 = { SELECT\
+    \ *, 'Custom.MITRE.T1163_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1163_persistence()\
+    \ },\n    a482 = { SELECT *, 'Custom.MITRE.T1164__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1164__tmp_X() },\n    a483 = { SELECT *, 'Custom.MITRE.T1164__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1164__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a484 = { SELECT *, 'Custom.MITRE.T1164__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1164__Library_LaunchAgents_X() },\n    a485 = {\
+    \ SELECT *, 'Custom.MITRE.T1164__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1164__Library_LaunchDaemons_X() },\n    a486 = { SELECT\
+    \ *, 'Custom.MITRE.T1164_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1164_persistence()\
+    \ },\n    a487 = { SELECT *, 'Custom.MITRE.T1108__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1108__tmp_X() },\n    a488 = { SELECT *, 'Custom.MITRE.T1108__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1108__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a489 = { SELECT *, 'Custom.MITRE.T1108__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1108__Library_LaunchAgents_X() },\n    a490 = {\
+    \ SELECT *, 'Custom.MITRE.T1108__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1108__Library_LaunchDaemons_X() },\n    a491 = { SELECT\
+    \ *, 'Custom.MITRE.T1105_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1105_bash()\
+    \ },\n    a492 = { SELECT *, 'Custom.MITRE.T1105_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1105_sh()\
+    \ },\n    a493 = { SELECT *, 'Custom.MITRE.T1105_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1105_python() },\n    a494 = { SELECT *, 'Custom.MITRE.T1105_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1105_perl() },\n    a495 = { SELECT\
+    \ *, 'Custom.MITRE.T1105_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1105_ruby()\
+    \ },\n    a496 = { SELECT *, 'Custom.MITRE.T1105__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1105__tmp_X() },\n    a497 = { SELECT *, 'Custom.MITRE.T1105__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1105__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a498 = { SELECT *, 'Custom.MITRE.T1105__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1105__Library_LaunchAgents_X() },\n    a499 = {\
+    \ SELECT *, 'Custom.MITRE.T1105__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1105__Library_LaunchDaemons_X() },\n    a500 = { SELECT\
+    \ *, 'Custom.MITRE.T1018_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1018_bash()\
+    \ },\n    a501 = { SELECT *, 'Custom.MITRE.T1018_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1018_sh()\
+    \ },\n    a502 = { SELECT *, 'Custom.MITRE.T1018_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1018_python() },\n    a503 = { SELECT *, 'Custom.MITRE.T1018_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1018_perl() },\n    a504 = { SELECT\
+    \ *, 'Custom.MITRE.T1018_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1018_ruby()\
+    \ },\n    a505 = { SELECT *, 'Custom.MITRE.T1014__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1014__tmp_X() },\n    a506 = { SELECT *, 'Custom.MITRE.T1014__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1014__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a507 = { SELECT *, 'Custom.MITRE.T1014__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1014__Library_LaunchAgents_X() },\n    a508 = {\
+    \ SELECT *, 'Custom.MITRE.T1014__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1014__Library_LaunchDaemons_X() },\n    a509 = { SELECT\
+    \ *, 'Custom.MITRE.T1184__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1184__tmp_X()\
+    \ },\n    a510 = { SELECT *, 'Custom.MITRE.T1184__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1184__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a511 = { SELECT *, 'Custom.MITRE.T1184__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1184__Library_LaunchAgents_X() },\n    a512 = {\
+    \ SELECT *, 'Custom.MITRE.T1184__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1184__Library_LaunchDaemons_X() },\n    a513 = { SELECT\
+    \ *, 'Custom.MITRE.T1029_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1029_bash()\
+    \ },\n    a514 = { SELECT *, 'Custom.MITRE.T1029_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1029_sh()\
+    \ },\n    a515 = { SELECT *, 'Custom.MITRE.T1029_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1029_python() },\n    a516 = { SELECT *, 'Custom.MITRE.T1029_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1029_perl() },\n    a517 = { SELECT\
+    \ *, 'Custom.MITRE.T1029_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1029_ruby()\
+    \ },\n    a518 = { SELECT *, 'Custom.MITRE.T1029__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1029__tmp_X() },\n    a519 = { SELECT *, 'Custom.MITRE.T1029__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1029__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a520 = { SELECT *, 'Custom.MITRE.T1029__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1029__Library_LaunchAgents_X() },\n    a521 = {\
+    \ SELECT *, 'Custom.MITRE.T1029__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1029__Library_LaunchDaemons_X() },\n    a522 = { SELECT\
+    \ *, 'Custom.MITRE.T1113_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1113_bash()\
+    \ },\n    a523 = { SELECT *, 'Custom.MITRE.T1113_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1113_sh()\
+    \ },\n    a524 = { SELECT *, 'Custom.MITRE.T1113_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1113_python() },\n    a525 = { SELECT *, 'Custom.MITRE.T1113_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1113_perl() },\n    a526 = { SELECT\
+    \ *, 'Custom.MITRE.T1113_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1113_ruby()\
+    \ },\n    a527 = { SELECT *, 'Custom.MITRE.T1113__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1113__tmp_X() },\n    a528 = { SELECT *, 'Custom.MITRE.T1113__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1113__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a529 = { SELECT *, 'Custom.MITRE.T1113__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1113__Library_LaunchAgents_X() },\n    a530 = {\
+    \ SELECT *, 'Custom.MITRE.T1113__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1113__Library_LaunchDaemons_X() },\n    a531 = { SELECT\
+    \ *, 'Custom.MITRE.T1064_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1064_bash()\
+    \ },\n    a532 = { SELECT *, 'Custom.MITRE.T1064_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1064_sh()\
+    \ },\n    a533 = { SELECT *, 'Custom.MITRE.T1064_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1064_python() },\n    a534 = { SELECT *, 'Custom.MITRE.T1064_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1064_perl() },\n    a535 = { SELECT\
+    \ *, 'Custom.MITRE.T1064_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1064_ruby()\
+    \ },\n    a536 = { SELECT *, 'Custom.MITRE.T1064__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1064__tmp_X() },\n    a537 = { SELECT *, 'Custom.MITRE.T1064__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1064__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a538 = { SELECT *, 'Custom.MITRE.T1064__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1064__Library_LaunchAgents_X() },\n    a539 = {\
+    \ SELECT *, 'Custom.MITRE.T1064__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1064__Library_LaunchDaemons_X() },\n    a540 = { SELECT\
+    \ *, 'Custom.MITRE.T1063_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1063_bash()\
+    \ },\n    a541 = { SELECT *, 'Custom.MITRE.T1063_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1063_sh()\
+    \ },\n    a542 = { SELECT *, 'Custom.MITRE.T1063_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1063_python() },\n    a543 = { SELECT *, 'Custom.MITRE.T1063_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1063_perl() },\n    a544 = { SELECT\
+    \ *, 'Custom.MITRE.T1063_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1063_ruby()\
+    \ },\n    a545 = { SELECT *, 'Custom.MITRE.T1166_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1166_bash() },\n    a546 = { SELECT *, 'Custom.MITRE.T1166_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1166_sh() },\n    a547 = { SELECT\
+    \ *, 'Custom.MITRE.T1166_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1166_python()\
+    \ },\n    a548 = { SELECT *, 'Custom.MITRE.T1166_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1166_perl() },\n    a549 = { SELECT *, 'Custom.MITRE.T1166_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1166_ruby() },\n    a550 = { SELECT\
+    \ *, 'Custom.MITRE.T1166__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1166__tmp_X()\
+    \ },\n    a551 = { SELECT *, 'Custom.MITRE.T1166__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1166__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a552 = { SELECT *, 'Custom.MITRE.T1166__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1166__Library_LaunchAgents_X() },\n    a553 = {\
+    \ SELECT *, 'Custom.MITRE.T1166__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1166__Library_LaunchDaemons_X() },\n    a554 = { SELECT\
+    \ *, 'Custom.MITRE.T1153_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1153_bash()\
+    \ },\n    a555 = { SELECT *, 'Custom.MITRE.T1153_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1153_sh()\
+    \ },\n    a556 = { SELECT *, 'Custom.MITRE.T1153_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1153_python() },\n    a557 = { SELECT *, 'Custom.MITRE.T1153_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1153_perl() },\n    a558 = { SELECT\
+    \ *, 'Custom.MITRE.T1153_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1153_ruby()\
+    \ },\n    a559 = { SELECT *, 'Custom.MITRE.T1153__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1153__tmp_X() },\n    a560 = { SELECT *, 'Custom.MITRE.T1153__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1153__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a561 = { SELECT *, 'Custom.MITRE.T1153__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1153__Library_LaunchAgents_X() },\n    a562 = {\
+    \ SELECT *, 'Custom.MITRE.T1153__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1153__Library_LaunchDaemons_X() },\n    a563 = { SELECT\
+    \ *, 'Custom.MITRE.T1151_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1151_bash()\
+    \ },\n    a564 = { SELECT *, 'Custom.MITRE.T1151_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1151_sh()\
+    \ },\n    a565 = { SELECT *, 'Custom.MITRE.T1151_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1151_python() },\n    a566 = { SELECT *, 'Custom.MITRE.T1151_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1151_perl() },\n    a567 = { SELECT\
+    \ *, 'Custom.MITRE.T1151_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1151_ruby()\
+    \ },\n    a568 = { SELECT *, 'Custom.MITRE.T1151__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1151__tmp_X() },\n    a569 = { SELECT *, 'Custom.MITRE.T1151__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1151__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a570 = { SELECT *, 'Custom.MITRE.T1151__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1151__Library_LaunchAgents_X() },\n    a571 = {\
+    \ SELECT *, 'Custom.MITRE.T1151__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1151__Library_LaunchDaemons_X() },\n    a572 = { SELECT\
+    \ *, 'Custom.MITRE.T1032__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1032__tmp_X()\
+    \ },\n    a573 = { SELECT *, 'Custom.MITRE.T1032__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1032__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a574 = { SELECT *, 'Custom.MITRE.T1032__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1032__Library_LaunchAgents_X() },\n    a575 = {\
+    \ SELECT *, 'Custom.MITRE.T1032__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1032__Library_LaunchDaemons_X() },\n    a576 = { SELECT\
+    \ *, 'Custom.MITRE.T1165_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1165_bash()\
+    \ },\n    a577 = { SELECT *, 'Custom.MITRE.T1165_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1165_sh()\
+    \ },\n    a578 = { SELECT *, 'Custom.MITRE.T1165_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1165_python() },\n    a579 = { SELECT *, 'Custom.MITRE.T1165_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1165_perl() },\n    a580 = { SELECT\
+    \ *, 'Custom.MITRE.T1165_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1165_ruby()\
+    \ },\n    a581 = { SELECT *, 'Custom.MITRE.T1165__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1165__tmp_X() },\n    a582 = { SELECT *, 'Custom.MITRE.T1165__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1165__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a583 = { SELECT *, 'Custom.MITRE.T1165__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1165__Library_LaunchAgents_X() },\n    a584 = {\
+    \ SELECT *, 'Custom.MITRE.T1165__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1165__Library_LaunchDaemons_X() },\n    a585 = { SELECT\
+    \ *, 'Custom.MITRE.T1165_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1165_persistence()\
+    \ },\n    a586 = { SELECT *, 'Custom.MITRE.T1169_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1169_bash() },\n    a587 = { SELECT *, 'Custom.MITRE.T1169_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1169_sh() },\n    a588 = { SELECT\
+    \ *, 'Custom.MITRE.T1169_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1169_python()\
+    \ },\n    a589 = { SELECT *, 'Custom.MITRE.T1169_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1169_perl() },\n    a590 = { SELECT *, 'Custom.MITRE.T1169_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1169_ruby() },\n    a591 = { SELECT\
+    \ *, 'Custom.MITRE.T1169__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1169__tmp_X()\
+    \ },\n    a592 = { SELECT *, 'Custom.MITRE.T1169__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1169__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a593 = { SELECT *, 'Custom.MITRE.T1169__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1169__Library_LaunchAgents_X() },\n    a594 = {\
+    \ SELECT *, 'Custom.MITRE.T1169__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1169__Library_LaunchDaemons_X() },\n    a595 = { SELECT\
+    \ *, 'Custom.MITRE.T1082_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1082_bash()\
+    \ },\n    a596 = { SELECT *, 'Custom.MITRE.T1082_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1082_sh()\
+    \ },\n    a597 = { SELECT *, 'Custom.MITRE.T1082_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1082_python() },\n    a598 = { SELECT *, 'Custom.MITRE.T1082_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1082_perl() },\n    a599 = { SELECT\
+    \ *, 'Custom.MITRE.T1082_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1082_ruby()\
+    \ },\n    a600 = { SELECT *, 'Custom.MITRE.T1082__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1082__tmp_X() },\n    a601 = { SELECT *, 'Custom.MITRE.T1082__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1082__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a602 = { SELECT *, 'Custom.MITRE.T1082__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1082__Library_LaunchAgents_X() },\n    a603 = {\
+    \ SELECT *, 'Custom.MITRE.T1082__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1082__Library_LaunchDaemons_X() },\n    a604 = { SELECT\
+    \ *, 'Custom.MITRE.T1016_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1016_bash()\
+    \ },\n    a605 = { SELECT *, 'Custom.MITRE.T1016_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1016_sh()\
+    \ },\n    a606 = { SELECT *, 'Custom.MITRE.T1016_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1016_python() },\n    a607 = { SELECT *, 'Custom.MITRE.T1016_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1016_perl() },\n    a608 = { SELECT\
+    \ *, 'Custom.MITRE.T1016_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1016_ruby()\
+    \ },\n    a609 = { SELECT *, 'Custom.MITRE.T1049_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1049_bash() },\n    a610 = { SELECT *, 'Custom.MITRE.T1049_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1049_sh() },\n    a611 = { SELECT\
+    \ *, 'Custom.MITRE.T1049_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1049_python()\
+    \ },\n    a612 = { SELECT *, 'Custom.MITRE.T1049_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1049_perl() },\n    a613 = { SELECT *, 'Custom.MITRE.T1049_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1049_ruby() },\n    a614 = { SELECT\
+    \ *, 'Custom.MITRE.T1033_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1033_bash()\
+    \ },\n    a615 = { SELECT *, 'Custom.MITRE.T1033_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1033_sh()\
+    \ },\n    a616 = { SELECT *, 'Custom.MITRE.T1033_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1033_python() },\n    a617 = { SELECT *, 'Custom.MITRE.T1033_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1033_perl() },\n    a618 = { SELECT\
+    \ *, 'Custom.MITRE.T1033_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1033_ruby()\
+    \ },\n    a619 = { SELECT *, 'Custom.MITRE.T1033__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1033__tmp_X() },\n    a620 = { SELECT *, 'Custom.MITRE.T1033__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1033__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a621 = { SELECT *, 'Custom.MITRE.T1033__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1033__Library_LaunchAgents_X() },\n    a622 = {\
+    \ SELECT *, 'Custom.MITRE.T1033__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1033__Library_LaunchDaemons_X() },\n    a623 = { SELECT\
+    \ *, 'Custom.MITRE.T1072_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1072_bash()\
+    \ },\n    a624 = { SELECT *, 'Custom.MITRE.T1072_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1072_sh()\
+    \ },\n    a625 = { SELECT *, 'Custom.MITRE.T1072_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1072_python() },\n    a626 = { SELECT *, 'Custom.MITRE.T1072_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1072_perl() },\n    a627 = { SELECT\
+    \ *, 'Custom.MITRE.T1072_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1072_ruby()\
+    \ },\n    a628 = { SELECT *, 'Custom.MITRE.T1072__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1072__tmp_X() },\n    a629 = { SELECT *, 'Custom.MITRE.T1072__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1072__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a630 = { SELECT *, 'Custom.MITRE.T1072__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1072__Library_LaunchAgents_X() },\n    a631 = {\
+    \ SELECT *, 'Custom.MITRE.T1072__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1072__Library_LaunchDaemons_X() },\n    a632 = { SELECT\
+    \ *, 'Custom.MITRE.T1154_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1154_bash()\
+    \ },\n    a633 = { SELECT *, 'Custom.MITRE.T1154_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1154_sh()\
+    \ },\n    a634 = { SELECT *, 'Custom.MITRE.T1154_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1154_python() },\n    a635 = { SELECT *, 'Custom.MITRE.T1154_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1154_perl() },\n    a636 = { SELECT\
+    \ *, 'Custom.MITRE.T1154_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1154_ruby()\
+    \ },\n    a637 = { SELECT *, 'Custom.MITRE.T1154__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1154__tmp_X() },\n    a638 = { SELECT *, 'Custom.MITRE.T1154__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1154__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a639 = { SELECT *, 'Custom.MITRE.T1154__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1154__Library_LaunchAgents_X() },\n    a640 = {\
+    \ SELECT *, 'Custom.MITRE.T1154__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1154__Library_LaunchDaemons_X() },\n    a641 = { SELECT\
+    \ *, 'Custom.MITRE.T1154_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1154_persistence()\
+    \ },\n    a642 = { SELECT *, 'Custom.MITRE.T1078_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1078_bash() },\n    a643 = { SELECT *, 'Custom.MITRE.T1078_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1078_sh() },\n    a644 = { SELECT\
+    \ *, 'Custom.MITRE.T1078_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1078_python()\
+    \ },\n    a645 = { SELECT *, 'Custom.MITRE.T1078_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1078_perl() },\n    a646 = { SELECT *, 'Custom.MITRE.T1078_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1078_ruby() },\n    a647 = { SELECT\
+    \ *, 'Custom.MITRE.T1078__tmp_X' AS SourceArtifact FROM Artifact.Custom.MITRE.T1078__tmp_X()\
+    \ },\n    a648 = { SELECT *, 'Custom.MITRE.T1078__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1078__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a649 = { SELECT *, 'Custom.MITRE.T1078__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1078__Library_LaunchAgents_X() },\n    a650 = {\
+    \ SELECT *, 'Custom.MITRE.T1078__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1078__Library_LaunchDaemons_X() },\n    a651 = { SELECT\
+    \ *, 'Custom.MITRE.T1078_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1078_persistence()\
+    \ },\n    a652 = { SELECT *, 'Custom.MITRE.T1102_bash' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1102_bash() },\n    a653 = { SELECT *, 'Custom.MITRE.T1102_sh'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1102_sh() },\n    a654 = { SELECT\
+    \ *, 'Custom.MITRE.T1102_python' AS SourceArtifact FROM Artifact.Custom.MITRE.T1102_python()\
+    \ },\n    a655 = { SELECT *, 'Custom.MITRE.T1102_perl' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1102_perl() },\n    a656 = { SELECT *, 'Custom.MITRE.T1102_ruby'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1102_ruby() },\n    a657 = { SELECT\
+    \ *, 'Custom.MITRE.T1100_bash' AS SourceArtifact FROM Artifact.Custom.MITRE.T1100_bash()\
+    \ },\n    a658 = { SELECT *, 'Custom.MITRE.T1100_sh' AS SourceArtifact FROM Artifact.Custom.MITRE.T1100_sh()\
+    \ },\n    a659 = { SELECT *, 'Custom.MITRE.T1100_python' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1100_python() },\n    a660 = { SELECT *, 'Custom.MITRE.T1100_perl'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1100_perl() },\n    a661 = { SELECT\
+    \ *, 'Custom.MITRE.T1100_ruby' AS SourceArtifact FROM Artifact.Custom.MITRE.T1100_ruby()\
+    \ },\n    a662 = { SELECT *, 'Custom.MITRE.T1100__tmp_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1100__tmp_X() },\n    a663 = { SELECT *, 'Custom.MITRE.T1100__Users_X_Library_LaunchAgents_X'\
+    \ AS SourceArtifact FROM Artifact.Custom.MITRE.T1100__Users_X_Library_LaunchAgents_X()\
+    \ },\n    a664 = { SELECT *, 'Custom.MITRE.T1100__Library_LaunchAgents_X' AS SourceArtifact\
+    \ FROM Artifact.Custom.MITRE.T1100__Library_LaunchAgents_X() },\n    a665 = {\
+    \ SELECT *, 'Custom.MITRE.T1100__Library_LaunchDaemons_X' AS SourceArtifact FROM\
+    \ Artifact.Custom.MITRE.T1100__Library_LaunchDaemons_X() },\n    a666 = { SELECT\
+    \ *, 'Custom.MITRE.T1100_persistence' AS SourceArtifact FROM Artifact.Custom.MITRE.T1100_persistence()\
+    \ }\n)\n\n\n        SELECT\n            * \n        FROM all_results\n        "

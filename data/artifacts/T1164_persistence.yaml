@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1164_persistence
+type: CLIENT
+description: persistence type of Re-opened Applications with ID T1164
+sources:
+- query: "\nLET persistence_locations = SELECT * FROM Artifact.Mac.Persistence.LaunchAgents()\n\
+    LIMIT 50\n\nSELECT \n    Name,\n    Label,\n    Program,\n    ProgramArguments,\n\
+    \    RunAtLoad,\n    Source,\n    'T1164' as TechniqueID,\n    'Re-opened Applications'\
+    \ as TechniqueName\nFROM persistence_locations\n"

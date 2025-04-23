@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1064__Library_LaunchAgents_X
+type: CLIENT
+description: file_creation type of Scripting with ID T1064
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchAgents/*')\n\
+    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
+    \  'T1064' as TechniqueID,\n    'Scripting' as TechniqueName\nFROM file_events\n"

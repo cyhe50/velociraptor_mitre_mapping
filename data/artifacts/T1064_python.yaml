@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1064_python
+type: CLIENT
+description: process_execution type of Scripting with ID T1064
+sources:
+- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
+    LIMIT 50\n\nSELECT \n    CreateTime\n    Name as ProcessName,\n    Pid as PID,\n\
+    \    Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1064' as TechniqueID,\n\
+    \    'Scripting' as TechniqueName\nFROM process_events\n"

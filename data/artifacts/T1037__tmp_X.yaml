@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1037__tmp_X
+type: CLIENT
+description: file_creation type of Logon Scripts with ID T1037
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
+    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1037' as TechniqueID,\n\
+    \    'Logon Scripts' as TechniqueName\nFROM file_events\n"

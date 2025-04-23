@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1113__tmp_X
+type: CLIENT
+description: file_creation type of Screen Capture with ID T1113
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
+    \ \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n    'T1113' as TechniqueID,\n\
+    \    'Screen Capture' as TechniqueName\nFROM file_events\n"

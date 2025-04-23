@@ -1,0 +1,7 @@
+name: Custom.MITRE.T1176__Users_X_Library_LaunchAgents_X
+type: CLIENT
+description: file_creation type of Browser Extensions with ID T1176
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
+    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
+    \  'T1176' as TechniqueID,\n    'Browser Extensions' as TechniqueName\nFROM file_events\n"

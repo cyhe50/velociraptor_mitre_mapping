@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1092__Users_X_Library_LaunchAgents_X
+type: CLIENT
+description: file_creation type of Communication Through Removable Media with ID T1092
+sources:
+- query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
+    LIMIT 50\n\nSELECT \n    CreateTime,\n    FullPath,\n    Size,\n    Mode,\n  \
+    \  'T1092' as TechniqueID,\n    'Communication Through Removable Media' as TechniqueName\n\
+    FROM file_events\n"

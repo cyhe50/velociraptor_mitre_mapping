@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1159_ruby
+type: CLIENT
+description: process_execution type of Launch Agent with ID T1159
+sources:
+- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'ruby'\nLIMIT\
+    \ 50\n\nSELECT \n    CreateTime\n    Name as ProcessName,\n    Pid as PID,\n \
+    \   Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1159' as TechniqueID,\n\
+    \    'Launch Agent' as TechniqueName\nFROM process_events\n"

@@ -1,0 +1,8 @@
+name: Custom.MITRE.T1158_bash
+type: CLIENT
+description: process_execution type of Hidden Files and Directories with ID T1158
+sources:
+- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'bash'\nLIMIT\
+    \ 50\n\nSELECT \n    CreateTime\n    Name as ProcessName,\n    Pid as PID,\n \
+    \   Ppid as ParentPID,\n    Username,\n    CommandLine,\n    'T1158' as TechniqueID,\n\
+    \    'Hidden Files and Directories' as TechniqueName\nFROM process_events\n"
