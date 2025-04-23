@@ -47,7 +47,8 @@ def generate_main_artifact(artifacts):
     vql_query = "LET all_results = SELECT * FROM chain(\n"
     
     for i, name in enumerate(artifact_names):
-        vql_query += f"    a{i} = {{ SELECT *, '{name}' AS SourceArtifact FROM Artifact.{name}() }},\n"
+        # only one result of each technique_id is considered
+        vql_query += f"    a{i} = {{ SELECT *, '{name}' AS SourceArtifact FROM Artifact.{name}() LIMIT 1}},\n"
     
     # Remove the last comma and close the chain
     vql_query = vql_query.rstrip(",\n") + "\n)\n\n"

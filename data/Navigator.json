@@ -1,0 +1,4113 @@
+{
+    "name": "layer",
+    "versions": {
+        "attack": "16",
+        "navigator": "5.1.0",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "Linux",
+            "macOS",
+            "Network",
+            "PRE",
+            "Containers",
+            "IaaS",
+            "SaaS",
+            "Office Suite",
+            "Identity Provider"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "gradient": {
+        "colors": [
+            "#ff6666ff",
+            "#ffe766ff",
+            "#8ec843ff"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "selectSubtechniquesWithParent": false,
+    "selectVisibleTechniques": false,
+    "techniques": [
+        {
+            "techniqueID": "T1156",
+            "tactic": "persistence",
+            "comment": ".bash_profile and .bashrc",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1156",
+            "tactic": "persistence",
+            "comment": ".bash_profile and .bashrc",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "persistence",
+            "comment": "Account Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1092",
+            "tactic": "persistence",
+            "comment": "Communication Through Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1092",
+            "tactic": "persistence",
+            "comment": "Communication Through Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1092",
+            "tactic": "persistence",
+            "comment": "Communication Through Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1092",
+            "tactic": "persistence",
+            "comment": "Communication Through Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "persistence",
+            "comment": "Connection Proxy",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "persistence",
+            "comment": "Connection Proxy",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "persistence",
+            "comment": "Account Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Create Account",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Create Account",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Create Account",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Create Account",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Create Account",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1081",
+            "tactic": "persistence",
+            "comment": "Credentials in Files",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1081",
+            "tactic": "persistence",
+            "comment": "Credentials in Files",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1081",
+            "tactic": "persistence",
+            "comment": "Credentials in Files",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1081",
+            "tactic": "persistence",
+            "comment": "Credentials in Files",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1081",
+            "tactic": "persistence",
+            "comment": "Credentials in Files",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1081",
+            "tactic": "persistence",
+            "comment": "Credentials in Files",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1002",
+            "tactic": "persistence",
+            "comment": "Data Compressed",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1002",
+            "tactic": "persistence",
+            "comment": "Data Compressed",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1002",
+            "tactic": "persistence",
+            "comment": "Data Compressed",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1002",
+            "tactic": "persistence",
+            "comment": "Data Compressed",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1002",
+            "tactic": "persistence",
+            "comment": "Data Compressed",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1002",
+            "tactic": "persistence",
+            "comment": "Data Compressed",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1022",
+            "tactic": "persistence",
+            "comment": "Data Encrypted",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1022",
+            "tactic": "persistence",
+            "comment": "Data Encrypted",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1022",
+            "tactic": "persistence",
+            "comment": "Data Encrypted",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1022",
+            "tactic": "persistence",
+            "comment": "Data Encrypted",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1022",
+            "tactic": "persistence",
+            "comment": "Data Encrypted",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1022",
+            "tactic": "persistence",
+            "comment": "Data Encrypted",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "persistence",
+            "comment": "Data Staged",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "persistence",
+            "comment": "Data Staged",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "persistence",
+            "comment": "Data Staged",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "persistence",
+            "comment": "Data Staged",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "persistence",
+            "comment": "Account Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "persistence",
+            "comment": "Data Staged",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "persistence",
+            "comment": "Data Staged",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1030",
+            "tactic": "persistence",
+            "comment": "Data Transfer Size Limits",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1030",
+            "tactic": "persistence",
+            "comment": "Data Transfer Size Limits",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1030",
+            "tactic": "persistence",
+            "comment": "Data Transfer Size Limits",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1030",
+            "tactic": "persistence",
+            "comment": "Data Transfer Size Limits",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1030",
+            "tactic": "persistence",
+            "comment": "Data Transfer Size Limits",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "persistence",
+            "comment": "Account Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1030",
+            "tactic": "persistence",
+            "comment": "Data Transfer Size Limits",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "persistence",
+            "comment": "Data from Local System",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "persistence",
+            "comment": "Data from Local System",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "persistence",
+            "comment": "Data from Local System",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "persistence",
+            "comment": "Data from Local System",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "persistence",
+            "comment": "Data from Local System",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "persistence",
+            "comment": "Data from Local System",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "persistence",
+            "comment": "Account Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1039",
+            "tactic": "persistence",
+            "comment": "Data from Network Shared Drive",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1039",
+            "tactic": "persistence",
+            "comment": "Data from Network Shared Drive",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1039",
+            "tactic": "persistence",
+            "comment": "Data from Network Shared Drive",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1039",
+            "tactic": "persistence",
+            "comment": "Data from Network Shared Drive",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1039",
+            "tactic": "persistence",
+            "comment": "Data from Network Shared Drive",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1039",
+            "tactic": "persistence",
+            "comment": "Data from Network Shared Drive",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1025",
+            "tactic": "persistence",
+            "comment": "Data from Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "persistence",
+            "comment": "Account Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1025",
+            "tactic": "persistence",
+            "comment": "Data from Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1025",
+            "tactic": "persistence",
+            "comment": "Data from Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1025",
+            "tactic": "persistence",
+            "comment": "Data from Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1025",
+            "tactic": "persistence",
+            "comment": "Data from Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1025",
+            "tactic": "persistence",
+            "comment": "Data from Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "persistence",
+            "comment": "Disabling Security Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "persistence",
+            "comment": "Disabling Security Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1155",
+            "tactic": "persistence",
+            "comment": "AppleScript",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "persistence",
+            "comment": "Disabling Security Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "persistence",
+            "comment": "Disabling Security Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "persistence",
+            "comment": "Disabling Security Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "persistence",
+            "comment": "Disabling Security Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "persistence",
+            "comment": "Disabling Security Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1157",
+            "tactic": "persistence",
+            "comment": "Dylib Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1157",
+            "tactic": "persistence",
+            "comment": "Dylib Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1155",
+            "tactic": "persistence",
+            "comment": "AppleScript",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1157",
+            "tactic": "persistence",
+            "comment": "Dylib Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1157",
+            "tactic": "persistence",
+            "comment": "Dylib Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1157",
+            "tactic": "persistence",
+            "comment": "Dylib Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1157",
+            "tactic": "persistence",
+            "comment": "Dylib Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1157",
+            "tactic": "persistence",
+            "comment": "Dylib Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1052",
+            "tactic": "persistence",
+            "comment": "Exfiltration Over Physical Medium",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1052",
+            "tactic": "persistence",
+            "comment": "Exfiltration Over Physical Medium",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1052",
+            "tactic": "persistence",
+            "comment": "Exfiltration Over Physical Medium",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1052",
+            "tactic": "persistence",
+            "comment": "Exfiltration Over Physical Medium",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1052",
+            "tactic": "persistence",
+            "comment": "Exfiltration Over Physical Medium",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1052",
+            "tactic": "persistence",
+            "comment": "Exfiltration Over Physical Medium",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1068",
+            "tactic": "persistence",
+            "comment": "Exploitation of Vulnerability",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1068",
+            "tactic": "persistence",
+            "comment": "Exploitation of Vulnerability",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1068",
+            "tactic": "persistence",
+            "comment": "Exploitation of Vulnerability",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1068",
+            "tactic": "persistence",
+            "comment": "Exploitation of Vulnerability",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1068",
+            "tactic": "persistence",
+            "comment": "Exploitation of Vulnerability",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1068",
+            "tactic": "persistence",
+            "comment": "Exploitation of Vulnerability",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1107",
+            "tactic": "persistence",
+            "comment": "File Deletion",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1107",
+            "tactic": "persistence",
+            "comment": "File Deletion",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1107",
+            "tactic": "persistence",
+            "comment": "File Deletion",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1107",
+            "tactic": "persistence",
+            "comment": "File Deletion",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1107",
+            "tactic": "persistence",
+            "comment": "File Deletion",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1107",
+            "tactic": "persistence",
+            "comment": "File Deletion",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "persistence",
+            "comment": "File and Directory Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "persistence",
+            "comment": "File and Directory Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1017",
+            "tactic": "persistence",
+            "comment": "Application Deployment Software",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "persistence",
+            "comment": "File and Directory Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "persistence",
+            "comment": "File and Directory Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "persistence",
+            "comment": "File and Directory Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "persistence",
+            "comment": "File and Directory Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1144",
+            "tactic": "persistence",
+            "comment": "Gatekeeper Bypass",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1144",
+            "tactic": "persistence",
+            "comment": "Gatekeeper Bypass",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1144",
+            "tactic": "persistence",
+            "comment": "Gatekeeper Bypass",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1017",
+            "tactic": "persistence",
+            "comment": "Application Deployment Software",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1144",
+            "tactic": "persistence",
+            "comment": "Gatekeeper Bypass",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1144",
+            "tactic": "persistence",
+            "comment": "Gatekeeper Bypass",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1144",
+            "tactic": "persistence",
+            "comment": "Gatekeeper Bypass",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1061",
+            "tactic": "persistence",
+            "comment": "Graphical User Interface",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1061",
+            "tactic": "persistence",
+            "comment": "Graphical User Interface",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1061",
+            "tactic": "persistence",
+            "comment": "Graphical User Interface",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1061",
+            "tactic": "persistence",
+            "comment": "Graphical User Interface",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1061",
+            "tactic": "persistence",
+            "comment": "Graphical User Interface",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1061",
+            "tactic": "persistence",
+            "comment": "Graphical User Interface",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1148",
+            "tactic": "persistence",
+            "comment": "HISTCONTROL",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1148",
+            "tactic": "persistence",
+            "comment": "HISTCONTROL",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1148",
+            "tactic": "persistence",
+            "comment": "HISTCONTROL",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1148",
+            "tactic": "persistence",
+            "comment": "HISTCONTROL",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1158",
+            "tactic": "persistence",
+            "comment": "Hidden Files and Directories",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1158",
+            "tactic": "persistence",
+            "comment": "Hidden Files and Directories",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1158",
+            "tactic": "persistence",
+            "comment": "Hidden Files and Directories",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1158",
+            "tactic": "persistence",
+            "comment": "Hidden Files and Directories",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1158",
+            "tactic": "persistence",
+            "comment": "Hidden Files and Directories",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1158",
+            "tactic": "persistence",
+            "comment": "Hidden Files and Directories",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1158",
+            "tactic": "persistence",
+            "comment": "Hidden Files and Directories",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1147",
+            "tactic": "persistence",
+            "comment": "Hidden Users",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1147",
+            "tactic": "persistence",
+            "comment": "Hidden Users",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1147",
+            "tactic": "persistence",
+            "comment": "Hidden Users",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1147",
+            "tactic": "persistence",
+            "comment": "Hidden Users",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1143",
+            "tactic": "persistence",
+            "comment": "Hidden Window",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1143",
+            "tactic": "persistence",
+            "comment": "Hidden Window",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1143",
+            "tactic": "persistence",
+            "comment": "Hidden Window",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1143",
+            "tactic": "persistence",
+            "comment": "Hidden Window",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1143",
+            "tactic": "persistence",
+            "comment": "Hidden Window",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1143",
+            "tactic": "persistence",
+            "comment": "Hidden Window",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1066",
+            "tactic": "persistence",
+            "comment": "Indicator Removal from Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1010",
+            "tactic": "persistence",
+            "comment": "Application Window Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1066",
+            "tactic": "persistence",
+            "comment": "Indicator Removal from Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1066",
+            "tactic": "persistence",
+            "comment": "Indicator Removal from Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1066",
+            "tactic": "persistence",
+            "comment": "Indicator Removal from Tools",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "persistence",
+            "comment": "Indicator Removal on Host",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "persistence",
+            "comment": "Indicator Removal on Host",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "persistence",
+            "comment": "Indicator Removal on Host",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "persistence",
+            "comment": "Indicator Removal on Host",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "persistence",
+            "comment": "Input Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "persistence",
+            "comment": "Input Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1010",
+            "tactic": "persistence",
+            "comment": "Application Window Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "persistence",
+            "comment": "Input Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "persistence",
+            "comment": "Input Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "persistence",
+            "comment": "Input Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "persistence",
+            "comment": "Input Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1141",
+            "tactic": "persistence",
+            "comment": "Input Prompt",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1141",
+            "tactic": "persistence",
+            "comment": "Input Prompt",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1142",
+            "tactic": "persistence",
+            "comment": "Keychain",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1142",
+            "tactic": "persistence",
+            "comment": "Keychain",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1142",
+            "tactic": "persistence",
+            "comment": "Keychain",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1142",
+            "tactic": "persistence",
+            "comment": "Keychain",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1142",
+            "tactic": "persistence",
+            "comment": "Keychain",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1142",
+            "tactic": "persistence",
+            "comment": "Keychain",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1161",
+            "tactic": "persistence",
+            "comment": "LC_LOAD_DYLIB Addition",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1161",
+            "tactic": "persistence",
+            "comment": "LC_LOAD_DYLIB Addition",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1161",
+            "tactic": "persistence",
+            "comment": "LC_LOAD_DYLIB Addition",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1161",
+            "tactic": "persistence",
+            "comment": "LC_LOAD_DYLIB Addition",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1161",
+            "tactic": "persistence",
+            "comment": "LC_LOAD_DYLIB Addition",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1161",
+            "tactic": "persistence",
+            "comment": "LC_LOAD_DYLIB Addition",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1149",
+            "tactic": "persistence",
+            "comment": "LC_MAIN Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1149",
+            "tactic": "persistence",
+            "comment": "LC_MAIN Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1149",
+            "tactic": "persistence",
+            "comment": "LC_MAIN Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1149",
+            "tactic": "persistence",
+            "comment": "LC_MAIN Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1149",
+            "tactic": "persistence",
+            "comment": "LC_MAIN Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1149",
+            "tactic": "persistence",
+            "comment": "LC_MAIN Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1159",
+            "tactic": "persistence",
+            "comment": "Launch Agent",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1159",
+            "tactic": "persistence",
+            "comment": "Launch Agent",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1123",
+            "tactic": "persistence",
+            "comment": "Audio Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1159",
+            "tactic": "persistence",
+            "comment": "Launch Agent",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1159",
+            "tactic": "persistence",
+            "comment": "Launch Agent",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1159",
+            "tactic": "persistence",
+            "comment": "Launch Agent",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1159",
+            "tactic": "persistence",
+            "comment": "Launch Agent",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1159",
+            "tactic": "persistence",
+            "comment": "Launch Agent",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1160",
+            "tactic": "persistence",
+            "comment": "Launch Daemon",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1160",
+            "tactic": "persistence",
+            "comment": "Launch Daemon",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1123",
+            "tactic": "persistence",
+            "comment": "Audio Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1160",
+            "tactic": "persistence",
+            "comment": "Launch Daemon",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1160",
+            "tactic": "persistence",
+            "comment": "Launch Daemon",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1160",
+            "tactic": "persistence",
+            "comment": "Launch Daemon",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1160",
+            "tactic": "persistence",
+            "comment": "Launch Daemon",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1160",
+            "tactic": "persistence",
+            "comment": "Launch Daemon",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1152",
+            "tactic": "persistence",
+            "comment": "Launchctl",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1152",
+            "tactic": "persistence",
+            "comment": "Launchctl",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1152",
+            "tactic": "persistence",
+            "comment": "Launchctl",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1152",
+            "tactic": "persistence",
+            "comment": "Launchctl",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1152",
+            "tactic": "persistence",
+            "comment": "Launchctl",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1152",
+            "tactic": "persistence",
+            "comment": "Launchctl",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1152",
+            "tactic": "persistence",
+            "comment": "Launchctl",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1168",
+            "tactic": "persistence",
+            "comment": "Local Job Scheduling",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1168",
+            "tactic": "persistence",
+            "comment": "Local Job Scheduling",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1168",
+            "tactic": "persistence",
+            "comment": "Local Job Scheduling",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1168",
+            "tactic": "persistence",
+            "comment": "Local Job Scheduling",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1168",
+            "tactic": "persistence",
+            "comment": "Local Job Scheduling",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1168",
+            "tactic": "persistence",
+            "comment": "Local Job Scheduling",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1168",
+            "tactic": "persistence",
+            "comment": "Local Job Scheduling",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1162",
+            "tactic": "persistence",
+            "comment": "Login Item",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1162",
+            "tactic": "persistence",
+            "comment": "Login Item",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1162",
+            "tactic": "persistence",
+            "comment": "Login Item",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1162",
+            "tactic": "persistence",
+            "comment": "Login Item",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1162",
+            "tactic": "persistence",
+            "comment": "Login Item",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1162",
+            "tactic": "persistence",
+            "comment": "Login Item",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1162",
+            "tactic": "persistence",
+            "comment": "Login Item",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1037",
+            "tactic": "persistence",
+            "comment": "Logon Scripts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1037",
+            "tactic": "persistence",
+            "comment": "Logon Scripts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1123",
+            "tactic": "persistence",
+            "comment": "Audio Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1037",
+            "tactic": "persistence",
+            "comment": "Logon Scripts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1037",
+            "tactic": "persistence",
+            "comment": "Logon Scripts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1037",
+            "tactic": "persistence",
+            "comment": "Logon Scripts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1037",
+            "tactic": "persistence",
+            "comment": "Logon Scripts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1037",
+            "tactic": "persistence",
+            "comment": "Logon Scripts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "persistence",
+            "comment": "Masquerading",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "persistence",
+            "comment": "Masquerading",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1123",
+            "tactic": "persistence",
+            "comment": "Audio Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "persistence",
+            "comment": "Masquerading",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "persistence",
+            "comment": "Masquerading",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "persistence",
+            "comment": "Masquerading",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "persistence",
+            "comment": "Masquerading",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1104",
+            "tactic": "persistence",
+            "comment": "Multi-Stage Channels",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1104",
+            "tactic": "persistence",
+            "comment": "Multi-Stage Channels",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1123",
+            "tactic": "persistence",
+            "comment": "Audio Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1104",
+            "tactic": "persistence",
+            "comment": "Multi-Stage Channels",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1104",
+            "tactic": "persistence",
+            "comment": "Multi-Stage Channels",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1104",
+            "tactic": "persistence",
+            "comment": "Multi-Stage Channels",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1104",
+            "tactic": "persistence",
+            "comment": "Multi-Stage Channels",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1046",
+            "tactic": "persistence",
+            "comment": "Network Service Scanning",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1046",
+            "tactic": "persistence",
+            "comment": "Network Service Scanning",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1123",
+            "tactic": "persistence",
+            "comment": "Audio Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1135",
+            "tactic": "persistence",
+            "comment": "Network Share Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1135",
+            "tactic": "persistence",
+            "comment": "Network Share Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1135",
+            "tactic": "persistence",
+            "comment": "Network Share Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1135",
+            "tactic": "persistence",
+            "comment": "Network Share Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1135",
+            "tactic": "persistence",
+            "comment": "Network Share Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1135",
+            "tactic": "persistence",
+            "comment": "Network Share Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "persistence",
+            "comment": "Automated Collection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "persistence",
+            "comment": "Obfuscated Files or Information",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "persistence",
+            "comment": "Obfuscated Files or Information",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "persistence",
+            "comment": "Obfuscated Files or Information",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "persistence",
+            "comment": "Obfuscated Files or Information",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "persistence",
+            "comment": "Obfuscated Files or Information",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "persistence",
+            "comment": "Obfuscated Files or Information",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1069",
+            "tactic": "persistence",
+            "comment": "Permission Groups Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "persistence",
+            "comment": "Automated Collection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1069",
+            "tactic": "persistence",
+            "comment": "Permission Groups Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1150",
+            "tactic": "persistence",
+            "comment": "Plist Modification",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1150",
+            "tactic": "persistence",
+            "comment": "Plist Modification",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1150",
+            "tactic": "persistence",
+            "comment": "Plist Modification",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1150",
+            "tactic": "persistence",
+            "comment": "Plist Modification",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1150",
+            "tactic": "persistence",
+            "comment": "Plist Modification",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1150",
+            "tactic": "persistence",
+            "comment": "Plist Modification",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1150",
+            "tactic": "persistence",
+            "comment": "Plist Modification",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1145",
+            "tactic": "persistence",
+            "comment": "Private Keys",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1145",
+            "tactic": "persistence",
+            "comment": "Private Keys",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1145",
+            "tactic": "persistence",
+            "comment": "Private Keys",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1145",
+            "tactic": "persistence",
+            "comment": "Private Keys",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1057",
+            "tactic": "persistence",
+            "comment": "Process Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1057",
+            "tactic": "persistence",
+            "comment": "Process Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "persistence",
+            "comment": "Process Injection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "persistence",
+            "comment": "Process Injection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "persistence",
+            "comment": "Process Injection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "persistence",
+            "comment": "Process Injection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "persistence",
+            "comment": "Process Injection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "persistence",
+            "comment": "Process Injection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1163",
+            "tactic": "persistence",
+            "comment": "Rc.common",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1163",
+            "tactic": "persistence",
+            "comment": "Rc.common",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1163",
+            "tactic": "persistence",
+            "comment": "Rc.common",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1163",
+            "tactic": "persistence",
+            "comment": "Rc.common",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1163",
+            "tactic": "persistence",
+            "comment": "Rc.common",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "persistence",
+            "comment": "Automated Collection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1163",
+            "tactic": "persistence",
+            "comment": "Rc.common",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1163",
+            "tactic": "persistence",
+            "comment": "Rc.common",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1164",
+            "tactic": "persistence",
+            "comment": "Re-opened Applications",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1164",
+            "tactic": "persistence",
+            "comment": "Re-opened Applications",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1164",
+            "tactic": "persistence",
+            "comment": "Re-opened Applications",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1164",
+            "tactic": "persistence",
+            "comment": "Re-opened Applications",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1164",
+            "tactic": "persistence",
+            "comment": "Re-opened Applications",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1108",
+            "tactic": "persistence",
+            "comment": "Redundant Access",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1108",
+            "tactic": "persistence",
+            "comment": "Redundant Access",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1108",
+            "tactic": "persistence",
+            "comment": "Redundant Access",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "persistence",
+            "comment": "Automated Collection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1108",
+            "tactic": "persistence",
+            "comment": "Redundant Access",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "persistence",
+            "comment": "Remote File Copy",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "persistence",
+            "comment": "Remote File Copy",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "persistence",
+            "comment": "Remote File Copy",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "persistence",
+            "comment": "Remote File Copy",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "persistence",
+            "comment": "Remote File Copy",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "persistence",
+            "comment": "Remote File Copy",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1156",
+            "tactic": "persistence",
+            "comment": ".bash_profile and .bashrc",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "persistence",
+            "comment": "Automated Collection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "persistence",
+            "comment": "Remote System Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "persistence",
+            "comment": "Remote System Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1014",
+            "tactic": "persistence",
+            "comment": "Rootkit",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1014",
+            "tactic": "persistence",
+            "comment": "Rootkit",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1014",
+            "tactic": "persistence",
+            "comment": "Rootkit",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1014",
+            "tactic": "persistence",
+            "comment": "Rootkit",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1184",
+            "tactic": "persistence",
+            "comment": "SSH Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "persistence",
+            "comment": "Automated Collection",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1184",
+            "tactic": "persistence",
+            "comment": "SSH Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1184",
+            "tactic": "persistence",
+            "comment": "SSH Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1184",
+            "tactic": "persistence",
+            "comment": "SSH Hijacking",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1029",
+            "tactic": "persistence",
+            "comment": "Scheduled Transfer",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1029",
+            "tactic": "persistence",
+            "comment": "Scheduled Transfer",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1029",
+            "tactic": "persistence",
+            "comment": "Scheduled Transfer",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1029",
+            "tactic": "persistence",
+            "comment": "Scheduled Transfer",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1020",
+            "tactic": "persistence",
+            "comment": "Automated Exfiltration",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1029",
+            "tactic": "persistence",
+            "comment": "Scheduled Transfer",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1029",
+            "tactic": "persistence",
+            "comment": "Scheduled Transfer",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1113",
+            "tactic": "persistence",
+            "comment": "Screen Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1113",
+            "tactic": "persistence",
+            "comment": "Screen Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1113",
+            "tactic": "persistence",
+            "comment": "Screen Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1113",
+            "tactic": "persistence",
+            "comment": "Screen Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1113",
+            "tactic": "persistence",
+            "comment": "Screen Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1020",
+            "tactic": "persistence",
+            "comment": "Automated Exfiltration",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1113",
+            "tactic": "persistence",
+            "comment": "Screen Capture",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1064",
+            "tactic": "persistence",
+            "comment": "Scripting",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1064",
+            "tactic": "persistence",
+            "comment": "Scripting",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1064",
+            "tactic": "persistence",
+            "comment": "Scripting",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1064",
+            "tactic": "persistence",
+            "comment": "Scripting",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1064",
+            "tactic": "persistence",
+            "comment": "Scripting",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1064",
+            "tactic": "persistence",
+            "comment": "Scripting",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1063",
+            "tactic": "persistence",
+            "comment": "Security Software Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1063",
+            "tactic": "persistence",
+            "comment": "Security Software Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1166",
+            "tactic": "persistence",
+            "comment": "Setuid and Setgid",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1166",
+            "tactic": "persistence",
+            "comment": "Setuid and Setgid",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1166",
+            "tactic": "persistence",
+            "comment": "Setuid and Setgid",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1166",
+            "tactic": "persistence",
+            "comment": "Setuid and Setgid",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1166",
+            "tactic": "persistence",
+            "comment": "Setuid and Setgid",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1166",
+            "tactic": "persistence",
+            "comment": "Setuid and Setgid",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1153",
+            "tactic": "persistence",
+            "comment": "Source",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1153",
+            "tactic": "persistence",
+            "comment": "Source",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1153",
+            "tactic": "persistence",
+            "comment": "Source",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1153",
+            "tactic": "persistence",
+            "comment": "Source",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1153",
+            "tactic": "persistence",
+            "comment": "Source",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1153",
+            "tactic": "persistence",
+            "comment": "Source",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1151",
+            "tactic": "persistence",
+            "comment": "Space after Filename",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1151",
+            "tactic": "persistence",
+            "comment": "Space after Filename",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1151",
+            "tactic": "persistence",
+            "comment": "Space after Filename",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1151",
+            "tactic": "persistence",
+            "comment": "Space after Filename",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1020",
+            "tactic": "persistence",
+            "comment": "Automated Exfiltration",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1151",
+            "tactic": "persistence",
+            "comment": "Space after Filename",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1151",
+            "tactic": "persistence",
+            "comment": "Space after Filename",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1032",
+            "tactic": "persistence",
+            "comment": "Standard Cryptographic Protocol",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1032",
+            "tactic": "persistence",
+            "comment": "Standard Cryptographic Protocol",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1032",
+            "tactic": "persistence",
+            "comment": "Standard Cryptographic Protocol",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1032",
+            "tactic": "persistence",
+            "comment": "Standard Cryptographic Protocol",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1165",
+            "tactic": "persistence",
+            "comment": "Startup Items",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1165",
+            "tactic": "persistence",
+            "comment": "Startup Items",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1020",
+            "tactic": "persistence",
+            "comment": "Automated Exfiltration",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1165",
+            "tactic": "persistence",
+            "comment": "Startup Items",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1165",
+            "tactic": "persistence",
+            "comment": "Startup Items",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1165",
+            "tactic": "persistence",
+            "comment": "Startup Items",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1165",
+            "tactic": "persistence",
+            "comment": "Startup Items",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1165",
+            "tactic": "persistence",
+            "comment": "Startup Items",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1169",
+            "tactic": "persistence",
+            "comment": "Sudo",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1169",
+            "tactic": "persistence",
+            "comment": "Sudo",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1020",
+            "tactic": "persistence",
+            "comment": "Automated Exfiltration",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1169",
+            "tactic": "persistence",
+            "comment": "Sudo",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1169",
+            "tactic": "persistence",
+            "comment": "Sudo",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1169",
+            "tactic": "persistence",
+            "comment": "Sudo",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1169",
+            "tactic": "persistence",
+            "comment": "Sudo",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "persistence",
+            "comment": "System Information Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "persistence",
+            "comment": "System Information Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1156",
+            "tactic": "persistence",
+            "comment": ".bash_profile and .bashrc",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1020",
+            "tactic": "persistence",
+            "comment": "Automated Exfiltration",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "persistence",
+            "comment": "System Information Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "persistence",
+            "comment": "System Information Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "persistence",
+            "comment": "System Information Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "persistence",
+            "comment": "System Information Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1016",
+            "tactic": "persistence",
+            "comment": "System Network Configuration Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1016",
+            "tactic": "persistence",
+            "comment": "System Network Configuration Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1049",
+            "tactic": "persistence",
+            "comment": "System Network Connections Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1139",
+            "tactic": "persistence",
+            "comment": "Bash History",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1049",
+            "tactic": "persistence",
+            "comment": "System Network Connections Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "persistence",
+            "comment": "System Owner/User Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "persistence",
+            "comment": "System Owner/User Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "persistence",
+            "comment": "System Owner/User Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1139",
+            "tactic": "persistence",
+            "comment": "Bash History",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "persistence",
+            "comment": "System Owner/User Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "persistence",
+            "comment": "System Owner/User Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "persistence",
+            "comment": "System Owner/User Discovery",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1072",
+            "tactic": "persistence",
+            "comment": "Third-party Software",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1072",
+            "tactic": "persistence",
+            "comment": "Third-party Software",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1072",
+            "tactic": "persistence",
+            "comment": "Third-party Software",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1072",
+            "tactic": "persistence",
+            "comment": "Third-party Software",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1139",
+            "tactic": "persistence",
+            "comment": "Bash History",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1072",
+            "tactic": "persistence",
+            "comment": "Third-party Software",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1072",
+            "tactic": "persistence",
+            "comment": "Third-party Software",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1154",
+            "tactic": "persistence",
+            "comment": "Trap",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1154",
+            "tactic": "persistence",
+            "comment": "Trap",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1154",
+            "tactic": "persistence",
+            "comment": "Trap",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1154",
+            "tactic": "persistence",
+            "comment": "Trap",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1154",
+            "tactic": "persistence",
+            "comment": "Trap",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1139",
+            "tactic": "persistence",
+            "comment": "Bash History",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1154",
+            "tactic": "persistence",
+            "comment": "Trap",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1154",
+            "tactic": "persistence",
+            "comment": "Trap",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "persistence",
+            "comment": "Valid Accounts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "persistence",
+            "comment": "Valid Accounts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "persistence",
+            "comment": "Valid Accounts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "persistence",
+            "comment": "Valid Accounts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "persistence",
+            "comment": "Valid Accounts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1009",
+            "tactic": "persistence",
+            "comment": "Binary Padding",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "persistence",
+            "comment": "Valid Accounts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "persistence",
+            "comment": "Valid Accounts",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1102",
+            "tactic": "persistence",
+            "comment": "Web Service",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1102",
+            "tactic": "persistence",
+            "comment": "Web Service",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1100",
+            "tactic": "persistence",
+            "comment": "Web Shell",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1100",
+            "tactic": "persistence",
+            "comment": "Web Shell",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1009",
+            "tactic": "persistence",
+            "comment": "Binary Padding",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1100",
+            "tactic": "persistence",
+            "comment": "Web Shell",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1100",
+            "tactic": "persistence",
+            "comment": "Web Shell",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1100",
+            "tactic": "persistence",
+            "comment": "Web Shell",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1100",
+            "tactic": "persistence",
+            "comment": "Web Shell",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1100",
+            "tactic": "persistence",
+            "comment": "Web Shell",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1156",
+            "tactic": "persistence",
+            "comment": ".bash_profile and .bashrc",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1009",
+            "tactic": "persistence",
+            "comment": "Binary Padding",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1009",
+            "tactic": "persistence",
+            "comment": "Binary Padding",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1009",
+            "tactic": "persistence",
+            "comment": "Binary Padding",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1009",
+            "tactic": "persistence",
+            "comment": "Binary Padding",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1176",
+            "tactic": "persistence",
+            "comment": "Browser Extensions",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1176",
+            "tactic": "persistence",
+            "comment": "Browser Extensions",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1176",
+            "tactic": "persistence",
+            "comment": "Browser Extensions",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1176",
+            "tactic": "persistence",
+            "comment": "Browser Extensions",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1176",
+            "tactic": "persistence",
+            "comment": "Browser Extensions",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1146",
+            "tactic": "persistence",
+            "comment": "Clear Command History",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1156",
+            "tactic": "persistence",
+            "comment": ".bash_profile and .bashrc",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1146",
+            "tactic": "persistence",
+            "comment": "Clear Command History",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1146",
+            "tactic": "persistence",
+            "comment": "Clear Command History",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1146",
+            "tactic": "persistence",
+            "comment": "Clear Command History",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1116",
+            "tactic": "persistence",
+            "comment": "Code Signing",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1116",
+            "tactic": "persistence",
+            "comment": "Code Signing",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1116",
+            "tactic": "persistence",
+            "comment": "Code Signing",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1116",
+            "tactic": "persistence",
+            "comment": "Code Signing",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1156",
+            "tactic": "persistence",
+            "comment": ".bash_profile and .bashrc",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1116",
+            "tactic": "persistence",
+            "comment": "Code Signing",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1116",
+            "tactic": "persistence",
+            "comment": "Code Signing",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "persistence",
+            "comment": "Command-Line Interface",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "persistence",
+            "comment": "Command-Line Interface",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1092",
+            "tactic": "persistence",
+            "comment": "Communication Through Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1092",
+            "tactic": "persistence",
+            "comment": "Communication Through Removable Media",
+            "enabled": true,
+            "metadata": [],
+            "score": 3,
+            "showSubtechniques": false
+        }
+    ]
+}
