@@ -25,7 +25,7 @@ def convert_to_array_format(stix_data):
                 tech_id = references[0].get('external_id', '')
 
                 technique = {
-                    'id': tech_id,
+                    'id': tech_id.replace('.', '_'),
                     'name': obj.get('name', ''),
                     'description': obj.get('description', ''),
                     'platforms': platforms,

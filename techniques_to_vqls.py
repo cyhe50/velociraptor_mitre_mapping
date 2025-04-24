@@ -80,7 +80,7 @@ def convert_single_technique_to_vqls(technique):
 
             vql = {
                 "id": id,
-                "name": f"{id}_{process_name}",
+                "name": f"{id}_process_execution",
                 "description": f"process_execution type of {name} with ID {id}",
                 "vql": query
             }
@@ -104,7 +104,7 @@ def convert_single_technique_to_vqls(technique):
 
             vql = {
                 "id": id,
-                "name": f"{id}_{path.replace('/', '_').replace('*', 'X')}",
+                "name": f"{id}_file_creation",
                 "description": f"file_creation type of {name} with ID {id}",
                 "vql": query
             }
