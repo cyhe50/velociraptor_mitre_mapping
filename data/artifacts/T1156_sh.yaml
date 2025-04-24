@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1156_sh
-type: CLIENT
-description: process_execution type of .bash_profile and .bashrc with ID T1156
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1156' as TechniqueID,\n    '.bash_profile and .bashrc'\
-    \ as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"

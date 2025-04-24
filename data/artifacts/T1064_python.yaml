@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1064_python
-type: CLIENT
-description: process_execution type of Scripting with ID T1064
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    'T1064' as TechniqueID,\n    'Scripting' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

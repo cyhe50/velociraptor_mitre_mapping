@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1150_ruby
-type: CLIENT
-description: process_execution type of Plist Modification with ID T1150
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'ruby'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1150' as TechniqueID,\n    'Plist Modification' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

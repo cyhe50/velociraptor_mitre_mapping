@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1061__tmp_X
-type: CLIENT
-description: file_creation type of Graphical User Interface with ID T1061
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    'T1061' as TechniqueID,\n    'Graphical User Interface' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1136__tmp_X
-type: CLIENT
-description: file_creation type of Create Account with ID T1136
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    'T1136' as TechniqueID,\n    'Create Account' as TechniqueName,\n    'file_creation'\
-    \ as Tactic,\n    *\nFROM file_events\n"

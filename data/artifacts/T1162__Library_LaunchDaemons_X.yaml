@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1162__Library_LaunchDaemons_X
-type: CLIENT
-description: file_creation type of Login Item with ID T1162
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1162' as TechniqueID,\n    'Login Item' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1157__Library_LaunchAgents_X
-type: CLIENT
-description: file_creation type of Dylib Hijacking with ID T1157
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1157' as TechniqueID,\n    'Dylib Hijacking' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

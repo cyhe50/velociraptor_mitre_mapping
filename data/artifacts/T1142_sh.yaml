@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1142_sh
-type: CLIENT
-description: process_execution type of Keychain with ID T1142
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1142' as TechniqueID,\n    'Keychain' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

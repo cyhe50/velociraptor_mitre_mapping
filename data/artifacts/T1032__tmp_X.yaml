@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1032__tmp_X
-type: CLIENT
-description: file_creation type of Standard Cryptographic Protocol with ID T1032
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    'T1032' as TechniqueID,\n    'Standard Cryptographic Protocol' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

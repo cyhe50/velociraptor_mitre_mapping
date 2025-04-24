@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1145__tmp_X
-type: CLIENT
-description: file_creation type of Private Keys with ID T1145
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    'T1145' as TechniqueID,\n    'Private Keys' as TechniqueName,\n    'file_creation'\
-    \ as Tactic,\n    *\nFROM file_events\n"

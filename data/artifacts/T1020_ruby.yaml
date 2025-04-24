@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1020_ruby
-type: CLIENT
-description: process_execution type of Automated Exfiltration with ID T1020
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'ruby'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1020' as TechniqueID,\n    'Automated Exfiltration' as\
-    \ TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"

@@ -1,9 +1,0 @@
-name: Custom.MITRE.T1016_python
-type: CLIENT
-description: process_execution type of System Network Configuration Discovery with
-  ID T1016
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    'T1016' as TechniqueID,\n    'System Network Configuration\
-    \ Discovery' as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM\
-    \ process_events\n"

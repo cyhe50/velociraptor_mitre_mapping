@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1089_persistence
-type: CLIENT
-description: persistence type of Disabling Security Tools with ID T1089
-sources:
-- query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    'T1089' as TechniqueID,\n    'Disabling Security Tools'\
-    \ as TechniqueName,\n    'persistence' as Tactic,\n    *\nFROM persistence_locations\n"

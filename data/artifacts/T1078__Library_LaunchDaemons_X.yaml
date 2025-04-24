@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1078__Library_LaunchDaemons_X
-type: CLIENT
-description: file_creation type of Valid Accounts with ID T1078
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1078' as TechniqueID,\n    'Valid Accounts' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

@@ -1,8 +1,0 @@
-name: Custom.MITRE.T1092_ruby
-type: CLIENT
-description: process_execution type of Communication Through Removable Media with
-  ID T1092
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'ruby'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1092' as TechniqueID,\n    'Communication Through Removable\
-    \ Media' as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"

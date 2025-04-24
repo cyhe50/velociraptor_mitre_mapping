@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1160_bash
-type: CLIENT
-description: process_execution type of Launch Daemon with ID T1160
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'bash'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1160' as TechniqueID,\n    'Launch Daemon' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1135__tmp_X
-type: CLIENT
-description: file_creation type of Network Share Discovery with ID T1135
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    'T1135' as TechniqueID,\n    'Network Share Discovery' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

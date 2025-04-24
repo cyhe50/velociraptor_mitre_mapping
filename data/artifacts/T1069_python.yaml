@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1069_python
-type: CLIENT
-description: process_execution type of Permission Groups Discovery with ID T1069
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'python'\n\
-    LIMIT 50\n\nSELECT \n    'T1069' as TechniqueID,\n    'Permission Groups Discovery'\
-    \ as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"

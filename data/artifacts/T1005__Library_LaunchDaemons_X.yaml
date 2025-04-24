@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1005__Library_LaunchDaemons_X
-type: CLIENT
-description: file_creation type of Data from Local System with ID T1005
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1005' as TechniqueID,\n    'Data from Local System'\
-    \ as TechniqueName,\n    'file_creation' as Tactic,\n    *\nFROM file_events\n"

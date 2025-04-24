@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1184__Users_X_Library_LaunchAgents_X
-type: CLIENT
-description: file_creation type of SSH Hijacking with ID T1184
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1184' as TechniqueID,\n    'SSH Hijacking' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

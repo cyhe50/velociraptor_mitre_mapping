@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1123__Library_LaunchDaemons_X
-type: CLIENT
-description: file_creation type of Audio Capture with ID T1123
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchDaemons/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1123' as TechniqueID,\n    'Audio Capture' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

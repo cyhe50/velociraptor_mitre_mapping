@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1083__tmp_X
-type: CLIENT
-description: file_creation type of File and Directory Discovery with ID T1083
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    'T1083' as TechniqueID,\n    'File and Directory Discovery' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1146__tmp_X
-type: CLIENT
-description: file_creation type of Clear Command History with ID T1146
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    'T1146' as TechniqueID,\n    'Clear Command History' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

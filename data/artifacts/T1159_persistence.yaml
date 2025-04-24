@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1159_persistence
-type: CLIENT
-description: persistence type of Launch Agent with ID T1159
-sources:
-- query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    'T1159' as TechniqueID,\n    'Launch Agent' as TechniqueName,\n\
-    \    'persistence' as Tactic,\n    *\nFROM persistence_locations\n"

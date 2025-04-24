@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1136_persistence
-type: CLIENT
-description: persistence type of Create Account with ID T1136
-sources:
-- query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    'T1136' as TechniqueID,\n    'Create Account' as TechniqueName,\n\
-    \    'persistence' as Tactic,\n    *\nFROM persistence_locations\n"

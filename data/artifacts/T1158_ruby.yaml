@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1158_ruby
-type: CLIENT
-description: process_execution type of Hidden Files and Directories with ID T1158
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'ruby'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1158' as TechniqueID,\n    'Hidden Files and Directories'\
-    \ as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"

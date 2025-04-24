@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1068__Users_X_Library_LaunchAgents_X
-type: CLIENT
-description: file_creation type of Exploitation of Vulnerability with ID T1068
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1068' as TechniqueID,\n    'Exploitation of Vulnerability'\
-    \ as TechniqueName,\n    'file_creation' as Tactic,\n    *\nFROM file_events\n"

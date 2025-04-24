@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1037_bash
-type: CLIENT
-description: process_execution type of Logon Scripts with ID T1037
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'bash'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1037' as TechniqueID,\n    'Logon Scripts' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

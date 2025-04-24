@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1165_persistence
-type: CLIENT
-description: persistence type of Startup Items with ID T1165
-sources:
-- query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    'T1165' as TechniqueID,\n    'Startup Items' as TechniqueName,\n\
-    \    'persistence' as Tactic,\n    *\nFROM persistence_locations\n"

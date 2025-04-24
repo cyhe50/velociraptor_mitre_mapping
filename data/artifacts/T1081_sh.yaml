@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1081_sh
-type: CLIENT
-description: process_execution type of Credentials in Files with ID T1081
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1081' as TechniqueID,\n    'Credentials in Files' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

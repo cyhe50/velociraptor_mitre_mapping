@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1159__Library_LaunchAgents_X
-type: CLIENT
-description: file_creation type of Launch Agent with ID T1159
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1159' as TechniqueID,\n    'Launch Agent' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

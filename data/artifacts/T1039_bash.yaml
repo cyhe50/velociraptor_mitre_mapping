@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1039_bash
-type: CLIENT
-description: process_execution type of Data from Network Shared Drive with ID T1039
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'bash'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1039' as TechniqueID,\n    'Data from Network Shared Drive'\
-    \ as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"

@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1036_perl
-type: CLIENT
-description: process_execution type of Masquerading with ID T1036
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'perl'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1036' as TechniqueID,\n    'Masquerading' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

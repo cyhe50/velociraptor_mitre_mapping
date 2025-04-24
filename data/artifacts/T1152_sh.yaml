@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1152_sh
-type: CLIENT
-description: process_execution type of Launchctl with ID T1152
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1152' as TechniqueID,\n    'Launchctl' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

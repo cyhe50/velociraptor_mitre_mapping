@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1055_sh
-type: CLIENT
-description: process_execution type of Process Injection with ID T1055
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1055' as TechniqueID,\n    'Process Injection' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

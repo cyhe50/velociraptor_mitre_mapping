@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1037__Users_X_Library_LaunchAgents_X
-type: CLIENT
-description: file_creation type of Logon Scripts with ID T1037
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1037' as TechniqueID,\n    'Logon Scripts' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

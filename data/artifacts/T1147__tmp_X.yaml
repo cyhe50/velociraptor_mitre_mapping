@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1147__tmp_X
-type: CLIENT
-description: file_creation type of Hidden Users with ID T1147
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    'T1147' as TechniqueID,\n    'Hidden Users' as TechniqueName,\n    'file_creation'\
-    \ as Tactic,\n    *\nFROM file_events\n"

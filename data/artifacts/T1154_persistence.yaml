@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1154_persistence
-type: CLIENT
-description: persistence type of Trap with ID T1154
-sources:
-- query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    'T1154' as TechniqueID,\n    'Trap' as TechniqueName,\n\
-    \    'persistence' as Tactic,\n    *\nFROM persistence_locations\n"

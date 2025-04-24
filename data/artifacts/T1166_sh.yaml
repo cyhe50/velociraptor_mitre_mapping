@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1166_sh
-type: CLIENT
-description: process_execution type of Setuid and Setgid with ID T1166
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1166' as TechniqueID,\n    'Setuid and Setgid' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

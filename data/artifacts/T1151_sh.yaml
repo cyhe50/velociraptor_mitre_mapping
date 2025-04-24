@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1151_sh
-type: CLIENT
-description: process_execution type of Space after Filename with ID T1151
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'sh'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1151' as TechniqueID,\n    'Space after Filename' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

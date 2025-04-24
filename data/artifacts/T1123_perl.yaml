@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1123_perl
-type: CLIENT
-description: process_execution type of Audio Capture with ID T1123
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'perl'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1123' as TechniqueID,\n    'Audio Capture' as TechniqueName,\n\
-    \    'process_execution' as Tactic,\n    *\nFROM process_events\n"

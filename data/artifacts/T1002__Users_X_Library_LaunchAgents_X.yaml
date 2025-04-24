@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1002__Users_X_Library_LaunchAgents_X
-type: CLIENT
-description: file_creation type of Data Compressed with ID T1002
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1002' as TechniqueID,\n    'Data Compressed' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

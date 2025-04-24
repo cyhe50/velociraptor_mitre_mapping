@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1104__Users_X_Library_LaunchAgents_X
-type: CLIENT
-description: file_creation type of Multi-Stage Channels with ID T1104
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/Users/*/Library/LaunchAgents/*')\n\
-    LIMIT 50\n\nSELECT \n    'T1104' as TechniqueID,\n    'Multi-Stage Channels' as\
-    \ TechniqueName,\n    'file_creation' as Tactic,\n    *\nFROM file_events\n"

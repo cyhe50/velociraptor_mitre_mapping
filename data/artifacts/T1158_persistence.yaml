@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1158_persistence
-type: CLIENT
-description: persistence type of Hidden Files and Directories with ID T1158
-sources:
-- query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    'T1158' as TechniqueID,\n    'Hidden Files and Directories'\
-    \ as TechniqueName,\n    'persistence' as Tactic,\n    *\nFROM persistence_locations\n"

@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1037_persistence
-type: CLIENT
-description: persistence type of Logon Scripts with ID T1037
-sources:
-- query: "\nLET persistence_locations = SELECT * FROM Artifact.MacOS.Detection.Autoruns()\n\
-    LIMIT 50\n\nSELECT \n    'T1037' as TechniqueID,\n    'Logon Scripts' as TechniqueName,\n\
-    \    'persistence' as Tactic,\n    *\nFROM persistence_locations\n"

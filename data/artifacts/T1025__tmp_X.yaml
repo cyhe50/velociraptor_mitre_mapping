@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1025__tmp_X
-type: CLIENT
-description: file_creation type of Data from Removable Media with ID T1025
-sources:
-- query: "\nLET file_events = SELECT * FROM glob(globs='/tmp/*')\nLIMIT 50\n\nSELECT\
-    \ \n    'T1025' as TechniqueID,\n    'Data from Removable Media' as TechniqueName,\n\
-    \    'file_creation' as Tactic,\n    *\nFROM file_events\n"

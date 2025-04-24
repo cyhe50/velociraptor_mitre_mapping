@@ -1,7 +1,0 @@
-name: Custom.MITRE.T1033_bash
-type: CLIENT
-description: process_execution type of System Owner/User Discovery with ID T1033
-sources:
-- query: "\nLET process_events = SELECT * FROM pslist()\nWHERE Name =~ 'bash'\nLIMIT\
-    \ 50\n\nSELECT \n    'T1033' as TechniqueID,\n    'System Owner/User Discovery'\
-    \ as TechniqueName,\n    'process_execution' as Tactic,\n    *\nFROM process_events\n"
